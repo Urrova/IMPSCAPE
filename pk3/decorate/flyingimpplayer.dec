@@ -14,14 +14,15 @@ actor FlyingImpPlayer : PlayerPawn
 	Player.ColorRange 0, 0
 	Player.DisplayName "DarkImp"
 	Player.StartItem "ImpArm"
-	Player.StartItem "MonsterMana", 1000
+	Player.StartItem "MonsterMana", 1
+	Player.Face "STF"
 	+NOSKIN
         
 	States
 	{
 	Spawn:
 		AEIM AB 7
-		AEIM A 0 A_GiveInventory ("MonsterMana",1)
+		AEIM A 0
 		Loop
 	See:
 		AEIM AABBCCDD 3 

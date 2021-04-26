@@ -2,7 +2,6 @@ version "2.5"
 /*
 En este ZScript pongo includes a los otros archivos en el directiorio ZScript.
 */
-
 #include "zscript/effects.zsc"
 #include "zscript/projectiles.zsc"
 #include "zscript/misc.zsc"
@@ -10,3 +9,4 @@ En este ZScript pongo includes a los otros archivos en el directiorio ZScript.
 #include "zscript/enemies.zsc"
 #include "zscript/items.zsc"
 #include "zscript/part_spawners.zsc"
+#include "zscript/decorations.zsc"

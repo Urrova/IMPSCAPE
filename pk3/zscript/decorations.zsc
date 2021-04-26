@@ -1,0 +1,497 @@
+class Chair : Actor{
+	default{
+		+FloorClip;
+		+Solid;
+		Height 30;
+		Radius 15;
+	}
+	States{
+		Spawn:
+		CHAI A -1;
+		Stop;
+	}
+}
+
+class RandomExperimentalWeapon : Health{
+	default{
+		Inventory.PickupMessage "Picked up an experimental weapon.\nYou cant use it because youre an imp.";
+		Inventory.PickupSound "misc/w_pkup";
+		Inventory.Amount 0;
+		+INVENTORY.ALWAYSPICKUP;
+	}
+	states{
+		Spawn:
+			TNT1 A 0 A_Jump(255,"Sprite1","Sprite2","Sprite3","Sprite4","Sprite5");
+			loop;
+			
+		Sprite1:
+			DCAN A -1;
+			stop;
+			
+		Sprite2:
+			PLSP A -1;
+			stop;
+			
+		Sprite3:
+			KSWP A -1;
+			stop;
+			
+		Sprite4:
+			CHAN X -1;
+			stop;
+			
+		Sprite5:
+			LSCN E -1;
+			stop;
+	}
+}
+
+Class BrokenLamp : Actor{
+	default{
+		+FloorClip;
+		+Solid;
+		Height 30;
+		Radius 10;
+	}
+	States{
+		Spawn:
+		BLMP A -1;
+		Stop;
+	}
+}
+
+//////////////////////////////////UAC HOLOGRAMS////////////////////////////////////
+Class UACHolo1 : Actor{
+	default{
+		Scale 0.5;
+		Renderstyle "Add";
+		+NOGRAVITY;
+	}
+	States{
+		Spawn:
+			UAC1 A 2 BRIGHT A_SpawnItemEx("PlasmaSpawner", random(-16,16), random(-16,16), random(-4,-12), 0, 0, random(6,8),0,SXF_NOCHECKPOSITION);
+		Loop;
+	}
+}
+
+Class UACHolo2 : UACHolo1{
+	States{
+		Spawn:
+			UAC1 B 2 BRIGHT A_SpawnItemEx("PlasmaSpawner", random(-22,22), random(-22,22), random(-4,-12), 0, 0, random(6,8),0,SXF_NOCHECKPOSITION);
+			Loop;
+	}
+}
+////////////Cyan Holograms
+Class UACHolo3 : UACHolo1{
+	States{
+		Spawn:
+			UAC2 A 2 BRIGHT A_SpawnItemEx("PlasmaSpawner2", random(-16,16), random(-16,16), random(-4,-12), 0, 0, random(6,8),0,SXF_NOCHECKPOSITION);
+			Loop;
+	}
+}
+Class UACHolo4 : UACHolo1{
+	States{
+		Spawn:
+			UAC2 B 2 BRIGHT A_SpawnItemEx("PlasmaSpawner2", random(-22,22), random(-22,22), random(-4,-12), 0, 0, random(6,8),0,SXF_NOCHECKPOSITION);
+			Loop;
+	}
+}
+////////////Orange Holograms
+Class UACHolo5 : UACHolo1{
+	States{
+		Spawn:
+			UAC3 A 2 BRIGHT A_SpawnItemEx("PlasmaSpawner3", random(-16,16), random(-16,16), random(-4,-12), 0, 0, random(6,8),0,SXF_NOCHECKPOSITION);
+			Loop;
+	}
+}
+
+Class UACHolo6 : UACHolo1{
+	States{
+		Spawn:
+			UAC3 B 2 BRIGHT A_SpawnItemEx("PlasmaSpawner3", random(-22,22), random(-22,22), random(-4,-12), 0, 0, random(6,8),0,SXF_NOCHECKPOSITION);
+			Loop;
+	}
+}
+////////////Plasma Particle Spawner
+Class PlasmaSpawner : Actor{
+	default{
+		Alpha 0.75;
+		RenderStyle "Add";
+		+NOGRAVITY;
+		+DONTSPLASH;
+		+NOCLIP;
+		-SOLID;
+		Projectile;
+	}
+	States{
+		Spawn:
+			PLEM AAAAAAAAAAAAAAAA 1 BRIGHT A_FadeOut(0.09);
+			stop;
+		Death:
+			TNT1 A 1;
+			stop;
+	}
+}
+Class PlasmaSpawner2 : plasmaspawner{
+	States{
+		Spawn:
+			PLEM BBBBBBBBBBBBBBBB 1 BRIGHT A_FadeOut(0.09);
+			stop;
+		Death:
+			TNT1 A 1;
+			stop;
+	}
+}
+Class PlasmaSpawner3 : plasmaspawner{
+	States{
+		Spawn:
+			PLEM CCCCCCCCCCCCCCCC 1 BRIGHT A_FadeOut(0.09);
+			stop;
+		Death:
+			TNT1 A 1;
+			stop;
+	}
+}
+
+
+Class PlasmaSpawnerGreen : Actor{
+	default{
+		Scale 0.5;
+		Renderstyle "Add";
+		+NOGRAVITY;
+	}
+	States{
+		Spawn:
+			TNT1 A 2 BRIGHT A_SpawnItemEx("PlasmaSpawner", random(-16,16), random(-16,16), random(-4,-12), 0, 0, random(6,8),0,SXF_NOCHECKPOSITION);
+			Loop;
+	}
+}
+
+///////////////////////////////////PIPES/////////////////////////////////////////
+Class HPipe1 : Actor{
+	default{
+		Radius 16;
+		Height 128;
+		Tag "Pipe 1";
+		+SOLID;
+	}
+	States{
+		Spawn:
+			PIP1 A -1;
+			Stop;
+	}
+}
+
+Class HPipe2 : Actor{
+	default{
+		Radius 16;
+		Height 128;
+		Tag "Pipe 2";
+		+SOLID;
+	}
+	States{
+		Spawn:
+			PIP2 A -1;
+			Stop;
+	}
+}
+
+Class HPipe3 : Actor{
+	default{
+		Radius 16;
+		Height 128;
+		Tag "Pipe 3";
+		+SOLID;
+	}
+	States{
+		Spawn:
+			PIP3 A -1;
+			Stop;
+	}
+}
+
+Class HPipe4 : Actor{
+	default{
+		Radius 16;
+		Height 128;
+		Tag "Pipe 4";
+		+SOLID;
+	}
+	States{
+		Spawn:
+			PIP4 A -1;
+			Stop;
+	}
+}
+
+Class HPipe5 : Actor{
+	default{
+		Radius 16;
+		Height 128;
+		Tag "Pipe 5";
+		+SOLID;
+	}
+	States{
+		Spawn:
+			PIP5 A -1;
+			Stop;
+	}
+}
+
+///////////////////////////////OILDRUM///////////////////////////////////
+/////////////////////////OILDRUM////////////////////////////////////
+
+Class OilDrum : Actor{
+	default{
+		Health 20;
+		Radius 10;
+		Height 34;
+		+SOLID;
+		+SHOOTABLE;
+		+NOBLOOD;
+		+ACTIVATEMCROSS;
+		+DONTGIB;
+		+NOICEDEATH;
+		+OLDRADIUSDMG;
+		DeathSound "world/barrelx";
+		Obituary "$OB_BARREL";
+		}
+	States{
+		Spawn:
+			OILD A 6;
+			Loop;
+		Death:
+			OILD A 5 BRIGHT;
+			OILD A 5 BRIGHT A_Scream;
+			OILD B 5 BRIGHT;
+			OILD C 5 BRIGHT A_Explode;
+			OILC CCCCC 0 BRIGHT A_SpawnItemEx ("BarrelFlames", random (0, 40), random (0, 40), 0, 0, 0, 0, random (0, 360)) ;
+			OILD D 10 BRIGHT;
+			OILD D 1050 BRIGHT A_BarrelDestroy;
+			OILD D 5 A_Respawn;
+			Wait;
+	}
+}
+
+Class BarrelFlames : Actor{
+	default{
+		Radius 16;
+		Height 24;
+		ReactionTime 75;
+		damagetype "fire";
+		renderstyle "Add";
+		Projectile;
+		+NODAMAGETHRUST;
+		+BLOODLESSIMPACT;
+		-NOGRAVITY;
+		-DROPOFF;
+		-MISSILE;
+		-ACTIVATEIMPACT;
+		-ACTIVATEPCROSS;
+	}
+	States{
+		Spawn:
+			OILS A 0 bright;
+			OILS A 4 bright A_PlaySoundEx ("BarrelFire/Loop", "SoundSlot5", 1);
+			OILS A 0 bright A_PlaySoundEx ("BarrelFire/Start", "SoundSlot6");
+			OILS BC 4 bright;
+		FireLoop:
+			OILF AB 4 bright;
+			OILF C 4 bright A_Explode (5, 40);
+			OILF C 0 bright A_CountDown;
+			Loop;
+		Death:
+			OILS CB 4 bright;
+			OILS A 4 bright A_StopSoundEx ("SoundSlot5");
+			Stop;
+	}
+}
+
+
+
+///////////////////////////GLASS TECH PILLARS///////////////////////////////////
+
+//STANDARD BREAKABLE
+
+Class GTechPillar : Actor{
+	default{
+		Health 1;
+		Mass 99999;
+		Radius 12;
+		Height 128;
+		DeathHeight 128;
+		+SOLID;
+		+SHOOTABLE;
+		+NOBLOOD;
+		+DONTGIB;
+		+NOICEDEATH;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC A -1;
+			Loop;
+		Death:
+			GTEC B 1;
+			TNT1 A 0 A_PlaySound("PillarGlassBreak");
+			TNT1 AAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,48,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+			TNT1 AAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,68,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+			GTEC B -1;
+			Stop;
+	}
+}
+
+Class GTechPillarShort : Actor{
+	default{
+		Health 1;
+		Mass 99999;
+		Radius 12;
+		Height 82;
+		DeathHeight 82;
+		+SOLID;
+		+SHOOTABLE;
+		+NOBLOOD;
+		+DONTGIB;
+		+NOICEDEATH;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC G -1;
+			Loop;
+		Death:
+			GTEC H 1;
+			TNT1 A 0 A_PlaySound("PillarGlassBreak");
+			TNT1 AAAAAAAAAAAAAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,35,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+			GTEC H -1;
+			Stop;
+	}
+}
+
+//BLINKING LIGHTS AND BREAKABLE
+
+Class GTechPillarLight : Actor{
+	default{
+		Health 1;
+		Mass 99999;
+		Radius 12;
+		Height 128;
+		DeathHeight 128;
+		+SOLID;
+		+SHOOTABLE;
+		+NOBLOOD;
+		+DONTGIB;
+		+NOICEDEATH;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC CC 18;
+			GTEC D 6;
+			Loop;
+		Death:
+			TNT1 A 0 A_PlaySound("PillarGlassBreak");
+			TNT1 AAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,48,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+			TNT1 AAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,68,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+		Broken:	 
+			GTEC EE 18;
+			GTEC F 6;
+			Loop;
+	}
+}
+
+Class GTechPillarLightShort : Actor{
+	default{
+		Health 1;
+		Mass 99999;
+		Radius 12;
+		Height 82;
+		DeathHeight 82;
+		+SOLID;
+		+SHOOTABLE;
+		+NOBLOOD;
+		+DONTGIB;
+		+NOICEDEATH;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC II 18;
+			GTEC J 6;
+			Loop;
+		Death:
+			TNT1 A 0 A_PlaySound("PillarGlassBreak");
+			TNT1 AAAAAAAAAAAAAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,35,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+		Broken:	 
+			GTEC KK 18;
+			GTEC L 6;
+			Loop;
+	}
+}
+
+//ALREADY BROKEN PILLAR ACTORS FOR MAP DECORATION VARIETY
+
+Class GTechPillarB : Actor{
+	default{
+		Mass 99999;
+		Radius 12;
+		Height 128;
+		+SOLID;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC B -1;
+			Loop;
+	}
+}
+
+Class GTechPillarSB : Actor{
+	default{
+		Mass 99999;
+		Radius 12;
+		Height 82;
+		+SOLID;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC H -1;
+			Loop;
+	}
+}
+
+//ALREADY BROKEN WITH LIGHTS
+
+Class GTechPillarLightB : Actor{
+	default{
+		Mass 99999;
+		Radius 12;
+		Height 128;
+		+SOLID;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:	 
+			GTEC EE 18;
+			GTEC F 6;
+			Loop;
+	}
+}
+
+Class GTechPillarLightSB : Actor{
+	default{
+		Mass 99999;
+		Radius 12;
+		Height 82;
+		+SOLID;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC KK 18;
+			GTEC L 6;
+			Loop;
+	}
+}
+

@@ -40,6 +40,14 @@ class PixelParticleLong : Actor{
 	}
 }
 
+class PixelParticleLong_NoFade : PixelParticleLong{
+	states{
+		Spawn:
+			PXWH AAAAA 2 bright;
+			stop;
+	}
+}
+
 class PixelParticleShort : Actor{
 	default{
 		Scale 2;

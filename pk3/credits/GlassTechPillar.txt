@@ -1,0 +1,6 @@
+Submitted: Mor'ladim
+Decorate: Mor'ladim
+Sounds: Fate
+Sprites: id Software, Raven Software, Mor'ladim
+Sprite Edit: Mor'ladim
+Idea Base: Doom's tech pillars

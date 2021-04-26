@@ -14,6 +14,7 @@ DoomEdNums
   11000 = FirePowerUp
   11001 = DarkImpOrb
   11002 = FlyingImpOrb
+  11003 = RandomExperimentalWeapon
 //Marines
   12000 = ShotgunMarineEnemy
   12001 = PistolMarineEnemy
@@ -41,10 +42,12 @@ DoomEdNums
   13010 = ControlledPainElemental
   13011 = ControlledRevenant
   13012 = ControlledSpiderMastermind
-//Computer enemies
+//Enemigos computadoras
   13500 = Pixel
   13501 = DarkPixel
-  //Particulas
+//Jefes
+  13750 = UACCyber_Phase1
+//Particulas
   15000 = SpiralParticleSpawner_Red
   15001 = SpiralParticleSpawner_Green
   15002 = SpiralParticleSpawner_Blue
@@ -57,4 +60,33 @@ DoomEdNums
   15009 = CircleParticleSpawner_Red_Big
   15010 = CircleParticleSpawner_Green_Big
   15011 = CircleParticleSpawner_Blue_Big
+//Decoraciones
+  16000 = Chair
+  8264 = BrokenLamp
+  8265 = UACHolo1
+  8266 = UACHolo3
+  8267 = UACHolo4
+  8268 = UACHolo5
+  8269 = UACHolo6
+  8270 = PlasmaSpawner
+  8271 = PlasmaSpawner2
+  8272 = PlasmaSpawner3
+  900 = PlasmaSpawnerGreen
+  325 = HPipe1
+  326 = HPipe2
+  327 = HPipe3
+  328 = HPipe4
+  329 = HPipe5
+  8273 = OilDrum
+  8276 = GTechPillar
+  8277 = GTechPillarShort
+  8278 = GTechPillarLight
+  8279 = GTechPillarLightShort
+  8280 = GTechPillarB
+  8281 = GTechPillarSB
+  8282 = GTechPillarLightB
+  8283 = GTechPillarLightSB
+  //Torretas
+  8274 = RocketTurret
+  8275 = SentryGun
 }

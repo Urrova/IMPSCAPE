@@ -29,6 +29,9 @@ texture OCOMPA11 range OCOMPA18 tics 5
 texture OCOMPA21 range OCOMPA28 tics 5
 texture OCOMPA31 range OCOMPA38 tics 5
 
+//Laseres
+texture REDRAY1 range REDRAY4 tics 4
+
 /////ANIMATED FLATS/////
 flat convna1 range convna4 tics 5
 flat NUKEGE1 range NUKEGE3 tics 5
@@ -48,5 +51,3 @@ warp2 flat FWATER1
 warp2 flat FWATER2
 warp2 flat FWATER3
 warp2 flat FWATER4
-
-

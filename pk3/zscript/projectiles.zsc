@@ -11,11 +11,17 @@ class PlasmaShotgunBall : ArachnotronPlasma{
 	}
 }
 
-Class DarkFast : Actor{
+class impplayerball : doomimpball{
+	default{
+		speed 14;
+	}
+}
+
+class DarkFast : Actor{
   Default{
     Radius 8;
     Height 6;
-    Speed 18;
+    Speed 21;
     Damage 4;
     RENDERSTYLE "ADD";
     ALPHA 0.67;
@@ -35,7 +41,7 @@ Class DarkFast : Actor{
   }
 }
 
-Class PixelProj : Actor{
+class PixelProj : Actor{
 	default{
 		Radius 8;
 		Scale 2;
@@ -57,21 +63,122 @@ Class PixelProj : Actor{
 	}
 }
 
-class Bullet : Actor{
+// ========== BALAS DEL UAC CYBERDEMON ==========
+
+//Bala con velocidad angular
+class UACCyber_AngularVelocityBullet_Base : PlasmaBall{
 	default{
-		Radius 4;
-		height 8;
-		damage 2;
-		speed 60;
-		PROJECTILE;
-		+NOGRAVITY;
+		speed 5;
+		scale 0.4;
+		SeeSound "";
+	}
+	states{
+		Death:
+			BFE1 ABCDEF 4 Bright;
+			Stop;
+	}
+}
+
+class UACCyber_AngularVelocityBullet_Right : UACCyber_AngularVelocityBullet_Base{
+	states{
+		Spawn:
+			BFS1 AB 1 Bright;
+			TNT1 A 0{
+			A_SpawnProjectile("UACCyber_AngularVelocityBullet_Right",0.0,0.0, -1, CMF_ABSOLUTEPITCH|CMF_AIMDIRECTION);
+			}
+			Stop;
+	}
+}
+
+class UACCyber_AngularVelocityBullet_Left : UACCyber_AngularVelocityBullet_Base{
+	default{
+		translation 2;
 	}
 	states{
 		Spawn:
-			BLLT A 1 Bright;
-			Loop;
-		  Death:
-			BLLT A 1 Bright;
+			BFS1 AB 1 Bright;
+			TNT1 A 0{
+			A_SpawnProjectile("UACCyber_AngularVelocityBullet_Left",0.0,0.0, +1, CMF_ABSOLUTEPITCH|CMF_AIMDIRECTION);
+			}
 			Stop;
+	}
+}
+
+
+//Balas que luego spawnean otras balas, y estas luego te siguen.
+
+class UACCyber_BulletSpawner1 : PlasmaBall{
+	void _CircleBullets (string ProjClass, int step){
+		for (int i = 0; i<360; i+=step){
+			A_SpawnProjectile(ProjClass,32.0,0.0, i, CMF_ABSOLUTEPITCH|CMF_AIMDIRECTION);
+		}
+	}
+	default{
+		speed 10;
+		scale 1;
+		SeeSound "";
+	}
+	states{
+		Spawn:
+			BFS1 A 35 Bright;
+			BFS1 A 0 _CircleBullets("UACCyber_PlasmaBallShootsAnotherToPlayer",10);
+			stop;
+	}
+}
+
+class UACCyber_PlasmaBallShootsAnotherToPlayer : PlasmaBall{
+	default{
+		monster;
+	}
+	states{
+		Spawn:
+		PLSS A 15 Bright;
+		TNT1 A 0 {
+		A_FaceTarget();
+		A_SpawnProjectile("PlasmaBall",0.0,0.0,0,0,0,AAPTR_PLAYER1);
+		}
+		stop;
+	}
+}
+
+class UACCyber_CacodemonBallButFaster : CacodemonBall{
+	default{
+	speed 40;
+	}
+}
+
+class BaronBall_Slow : BaronBall{
+	default{
+	Speed 10;
+	Damage 6;
+	RenderStyle "Add";
+	}
+}
+
+class BaronBall_Normal : BaronBall{
+	default{
+	Speed 15;
+	Translation "112:127=224:231";
+	}
+}
+
+class BaronBall_Fast : BaronBall{
+	default{
+	Speed 20;
+	Translation "112:127=168:191";
+	}
+}
+
+class BaronBall_SuperFast : BaronBall{
+	default{
+	Speed 25;
+	Translation "112:127=192:207";
+	}
+}
+
+class BaronBall_SuperSuperFast : BaronBall{
+	default{
+	Speed 30;
+	Translation "112:127=250:254";
 	}
 }

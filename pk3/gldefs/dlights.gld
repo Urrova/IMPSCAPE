@@ -21,6 +21,48 @@ glow{
 	}
 }
 
+//Bola del jugador (copiado y pegado desde lights.pk3)
+
+pointlight IMPBALL
+{
+    color 1.0 0.7 0.4
+    size 96
+	attenuate 1
+}
+
+// Doom imp fireball explosion
+flickerlight IMPBALL_X1{
+    color 0.7 0.4 0.25
+    size 120
+    secondarySize 132
+    chance 0.25
+	attenuate 1
+}
+
+flickerlight IMPBALL_X2{
+    color 0.4 0.2 0.1
+    size 144
+    secondarySize 156
+    chance 0.25
+	attenuate 1
+}
+
+flickerlight IMPBALL_X3{
+    color 0.2 0.1 0.0
+    size 168
+    secondarySize 180
+    chance 0.25
+	attenuate 1
+}
+
+object impplayerball{
+    frame BAL1A { light IMPBALL    }
+    frame BAL1B { light IMPBALL    }
+
+    frame BAL1C { light IMPBALL_X1 }
+    frame BAL1D { light IMPBALL_X2 }
+    frame BAL1E { light IMPBALL_X3 }
+}
 
 
 

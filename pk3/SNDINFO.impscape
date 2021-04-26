@@ -24,6 +24,9 @@ Marine/See1	"sounds/ALLYSITE"
 Marine/See2	"sounds/ALLYACTV"
 Marine/See3	"sounds/ALYBRDY"
 
+//UAC Cyberdemon
+UACCyber/Hoof "sounds/UACCyber/DSANHOOF"
+
 $random Marine/Site {Marine/See1 Marine/See2 Marine/See3}
 
 //Enemigos computadora
@@ -42,6 +45,9 @@ $ambient 2 compy3 point continuous 1.0
 $ambient 3 compy4 point continuous 1.0
 $ambient 4 compy5 point continuous 1.0
 $ambient 5 compy6 point continuous 1.0
+
+//Warps
+portalwarp "sounds/PORTALWARP"
 
 
 ///////////////SONIDOS MENU////////////////////

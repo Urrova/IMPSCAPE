@@ -1,0 +1,6 @@
+Code: Skulltag, Vader, Ghastly (ZScript conversion)
+GLDefs: Ghastly, Sandypaper (Brightmaps)
+Sounds: Id Software
+Sprites: Id Software
+Sprite Edit: Vader
+Idea Base: Skulltag

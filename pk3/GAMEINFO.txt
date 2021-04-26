@@ -3,4 +3,3 @@ IWAD = "DOOM2.WAD"
 StartupTitle = "IMPSCAPE: The escape from UAC"
 StartupColors = "FF 00 00", "00 00 00"
 LoadLights = 1
-LoadWidescreen = 1

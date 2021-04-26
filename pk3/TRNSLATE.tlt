@@ -1,0 +1,5 @@
+GreenToGreen = "112:127=112:127"
+GreenToRed = "112:127=32:47" //Rojo
+GreenToBlue = "112:127=192:207" //Azul
+GreenToOrange = "112:127=208:223" //Naranja
+GreenToYellow = "112:127=224:231" //Amarillo

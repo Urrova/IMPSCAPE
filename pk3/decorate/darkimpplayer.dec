@@ -14,14 +14,15 @@ actor DarkImpPlayer : PlayerPawn
 	Player.ColorRange 0, 0
 	Player.DisplayName "DarkImp"
 	Player.StartItem "DarkImpArm"
-	Player.StartItem "MonsterMana", 1000
+	Player.StartItem "MonsterMana", 1
+	Player.Face "STD"
 	+NOSKIN
 
 	States
 	{
 	Spawn:
 		DRKS AB 7
-		DRKS A 0 A_GiveInventory ("MonsterMana",1)
+		DRKS A 0
 		Loop
 	See:
 		DRKS AABBCCDD 3
@@ -84,7 +85,7 @@ actor DarkImpArm : weapon
   weapon.ammotype "MonsterMana"
   weapon.ammouse1 0
   weapon.ammouse2 0
-  weapon.ammogive 500
+  weapon.ammogive 1
   weapon.SlotNumber 1
 
 

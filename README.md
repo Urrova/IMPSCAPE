@@ -1,3 +1,18 @@
 # Bienvenido al repositorio de IMPSCAPE.
 
-Es un mod de doom que estoy desarrollando, en donde vos sos un imp, que los de la UAC capturaron para hacer experimentos y controlarlos.
+**IMPSCAPE** es un mod para GZDoom que estoy desarrollando, en donde sos un imp capturado por la UAC, para hacer expermientos de control demoniaco, y tenes que escapar de la misma base de la UAC.
+Es un pk3 que va a tener 8 mapas + 1 mapa secreto (osea largo de episodio)
+
+
+
+## Estado de los mapas:
+
+- **MAP01:** Lo empece, pero esta **muy** incompleto
+- **MAP02:** Terminado. Algun detalle le puedo poner.
+- **MAP03:** Lo empece, pero esta incompleto.
+- **MAP04:** Terminado! Faltan algunos efectos de sonido pero ya esta terminado!
+- **MAP05:** No lo empece
+- **MAP06:** No lo empece
+- **MAP07:** No lo empece
+- **MAP08:** No lo empece
+- **MAP09:** No lo empece

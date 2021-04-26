@@ -1,0 +1,15 @@
+Name: Oil Drum
+Connection: none
+Palette: Doom
+Summon: oildrum
+Ambient Sound: Yes
+De-/Activatable: No
+Destroyable: Yes
+Special Effects: No
+
+Submitted: Captain Toenail
+Decorate: Captain Toenail
+Sprites: Doom
+SpriteEdit: Captain Toenail
+Sounds: 3DRealms, Raven
+Idea Base: Worms 2 Armageddon oil drums

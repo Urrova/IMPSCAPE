@@ -1,23 +1,105 @@
-class GJunk : GlassJunk{
+//Pedazos de vidrio para los vidrios rompibles y los pilares de vidrio.
+Class PillarGlassShard : Actor{
 	default{
-		Radius 5;
-		Mass 5;
-		//Projectile;
-		-ACTIVATEPCROSS;
-		-ACTIVATEIMPACT;
-		-NOCLIP;
-		BounceType "HexenCompat";
-		BounceFactor 1;
-		Renderstyle "Translucent";
-		Alpha 0.4;
-		vspeed 20;
+		Radius 1;
+		Height 1;
+		Speed 15;
+		PROJECTILE;
+		-NOGRAVITY;
+		+THRUACTORS;
+		+MOVEWITHSECTOR;
+		Gravity 0.6;
+		RenderStyle "Add";
+		Alpha 0.6;
+		Scale 1.3;
+		DeathSound "GlassShardImpact";
 	}
 	States{
 		Spawn:
-			NJGL A 4 ;
-			Stop;
+			TNT1 A 0;
+			TNT1 A 0 A_Jump(255,"Standard","Small","Tiny","XLarge"); //Randomly selects a glass shard size.
+		Standard:	
+			PGSD ABCD 1;
+			Loop;
+		Small:	
+			TNT1 A 0 A_SetScale(0.8);
+			PGSD ABCD 1;
+			Loop;
+		Tiny:	
+			TNT1 A 0 A_SetScale(0.4);
+			PGSD ABCD 1;
+			Loop;
+		XLarge:	
+			TNT1 A 0 A_SetScale(1.6);
+			PGSD ABCD 1;
+			Loop;
 		Death:
-			NJGL E -1;
+			TNT1 A 0 A_SetTranslucent(0.3);
+			PGSD E 125;
 			Stop;
+	}
+}
+
+
+class ExplosionFX : Actor{
+	default{
+		Radius 11;
+		Height 8;
+		SeeSound "weapons/rocklx";
+		projectile;
+		+NOGRAVITY;
+	}
+	States{
+		Spawn:
+			MISL B 8 Bright;
+			MISL C 6 Bright;
+			MISL D 4 Bright;
+			Stop;
+	}
+}
+
+class GiantExplosionFX : Actor{
+	default{
+		Radius 11;
+		Height 8;
+		SeeSound "weapons/rocklx";
+		projectile;
+		Scale 10;
+		+NOGRAVITY;
+	}
+	States{
+		Spawn:
+			MISL B 40 Bright;
+			MISL C 25 Bright;
+			MISL D 25 Bright;
+			Stop;
+	}
+}
+
+class SmallSilentExplosionFX : ExplosionFX{
+	default{
+		SeeSound "";
+		Scale 0.3;
+	}
+}
+
+class GravityExplosionFire : Actor{
+	default{
+		radius 8;
+		height 8;
+		projectile;
+		speed 25;
+		vspeed 100;
+		-NOGRAVITY;
+	}
+	states{
+		Spawn:
+			MSIL B 1;
+		SpawnExplosion:
+			TNT1 A 2 A_SpawnItem("SmallSilentExplosionFX");
+			goto SpawnExplosion;
+		Death:
+			TNT1 A -1;
+			stop;
 	}
 }

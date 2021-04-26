@@ -1,0 +1,6 @@
+Code: Eriance, Ghastly Dragon (ZScript conversion)
+GLDefs: Ghastly Dragon, Sandypaper (Brightmaps)
+Sounds: Id Software, Midway
+Sprites: Id Software, Raven Software, Wolfendoom
+Sprite Edit: Eriance
+Idea Base: Doom Cyberdemon

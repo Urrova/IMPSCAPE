@@ -50,7 +50,6 @@ script "__endlib_Music_FadeOut" (void){
 	}
 }
 
-///////////////////////////////DIALOGS//////////////////////////////////////////
 //Funcion para dialogos
 function void dialog(str name, str message, int namecolor, int msgcolor, int del){
 	SetFont("SMALLFONT");
@@ -61,4 +60,14 @@ function void dialog(str name, str message, int namecolor, int msgcolor, int del
 		HudMessage(s:name;HUDMSG_FADEOUT,200,namecolor,0.5,0.8,del,0.3);
 	}
 	HudMessage(s:message;HUDMSG_FADEOUT,201,msgcolor,0.5,0.85,del,0.3);
+}
+
+//Funcion para imprimir en pantalla diferentes cosas segun la CVar "impscape_language"
+function void printlanguage(str message_eng, str message_esp){
+	if (GetCvar("impscape_language") == 0){
+		print(s:message_eng);
+	}
+	else if (GetCvar("impscape_language") == 1){
+		print(s:message_esp);
+	}
 }

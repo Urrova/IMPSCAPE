@@ -12,6 +12,12 @@ Enemigos nuevos:
 		-Pixel negro: Lo mismo que pixel pero negro y mas poderoso.
 	
 Jefes:
+	- UAC Cyberdemon: Un cyberdemon mejorado por la UAC.
+		Movimientos (4):
+			- Primer movimiento: Uno basico con balas lentas en forma de asterisco, y unos circulos con velocidad angular para un costado, y luego para el otro costado.
+			- Segundo: Uno donde el jefe dispara balas para arriba, que estallan en un circulo y luego las balas apuntan al jugador. Tambien dispara lineas de bolas de cacodemon para limitar al jugador.
+			- Tercero: Basicamente la misma mierda que el segundo, pero en vez de barreras un espiral que va girando.
+			- Cuarto: Uno con tiros random. Los de abajo (los que te pueden tocar) son lentos, mientras los de arriba (de decoracion) van mas rapido. 4 Capas: Verdes lentos, Amarillos normales, Rojos rapidos, Azules muy rapidos, Y violetas muy muy rapidos
 	- Antivirus.
 	- El jefe final.
 	
@@ -48,7 +54,10 @@ MAP04: Computer Station (no se me ocurrio un nombre mejor)
 	En la segunda parte te teletransportas a un vacio con muchas computadoras, circuitos en el techo,
 	atravesado por una serie de puentes, por los que te vas moviendo.
 	y al final de esta un tubo muy grande, que da lugar a la tercera parte, que te teletransportas al tubo,
-	este te eleva y salis del nivel.
+	este te eleva y llegas a un midboss.
+	
+	El midboss es un cyberdemon mejorado, un edit del annihilator. Bullethell como no, pero controlado. 4 esferas azules para curar al jugador ademas.
+	
 	
 	Mecanicas nuevas:
 		- Te metes dentro de computadoras para activar cosas
@@ -62,31 +71,46 @@ MAP05: The Bridge (TODO EN INGLOES XD)
 	
 MAP06: Installament exteriors
 	Musica: Robotic Invasion
+	Parte 1:
 	Mapa estilo ciudad en las afueras de la instalacion de la UAC. Al final se activa un campo de fuerza
 	que no te deja ir al sistema de teletransportadores, y tenes que entrar en la supercomputadora. 
 	Este mapa va a estar lleno de robots. Muchas torretas que te tiran misiles.
-	
+	Parte 2:
+	Vas al sistema de teletransportadores y te teletransportas a la dimension de la UAC. Y empieza MAP08.
 	
 MAP07: The supercomputer
 	Musica: Mirrored Mars
 	Este es un mapa de computadora grande (tipo te metes en una computadora que es todo el mapa).
 	Al final te enfrentas a un gran antivirus. Desarrollar mas.
+	Luego se destruye la supercomputadora. Tenes que escapar y al final empieza la parte 2 de MAP06.
+	El Sistema de teletransportadores tiene un sistema de computadoras alterno, por si la supercomputadora se daña
+	o alguien la sabotea, y se pueda usar como via de escape.
 
-MAP08: Teleporter System
+MAP08: UAC Dimension
+	Una dimension construida por la UAC, lleno de portales a otros lugares. Es la segunda dimension hecha por la
+	UAC, luego de que la primera resultara fallida. Esta primera es MAP09, el nivel secreto.
+	
 	Donde te tenes que teletransportar al infierno. Al final obviamente el jefe final. No danmaku, pero si dificil.
 	No tengo idea como va a ser, seguramente algun mech o algo asi.
 	
-	El Sistema de teletransportadores tiene un sistema de computadoras alterno, por si la supercomputadora se daña
-	o alguien la sabotea, y se pueda usar como via de escape.
-	
 	MAP08 va a estar lleno de portales estilo prey, hasta en polyobjects, tipo uno que gira para cambiar 
-	un portal por otro portal
+	un portal por otro portal.
 	
 	Como va a estar lleno de portales, la ambientacion puede cambiar bastante. No mas solamente tema base,
-	ya que el imp se puede teletransportar a una base submarina, a la luna, etc desde ahi.
+	ya que el imp se puede teletransportar a una base submarina, a la luna, etc desde ahi. Como es otra dimension,
+	tambien puede haber enemigos pixel ademas de monstruos y marines.
+	
+	Portales a:
+	- El infierno (obligatorio porque doom).
+	- La luna
+	- Gensokyo :v
+	- La dimension Livernac (la de DIMWEIRD.pk3)
 	
 	La escena final tiene un portal al infierno. Ahi se enfrenta con el jefe
 	
+MAP09: Failed Dimension
+	La primera dimension construida por la UAC, ahora fallida y corrupta.
+	Es el nivel secreto del pk3
 	
 	
 IDEAS:

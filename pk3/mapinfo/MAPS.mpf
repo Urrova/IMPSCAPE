@@ -3,7 +3,6 @@ defaultmap{
 	NoJump
 	NoCrouch
 	AllowFreelook
-	NoIntermission
 }
 
 map INTRO "XD"{

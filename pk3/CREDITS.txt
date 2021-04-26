@@ -1,11 +1,10 @@
 Mod Maker: URROVA
 
 Imp Player: taken from Doom Empathy
-Rocket Turret: Gothic
 Some of the sounds from the ZDoom Demo Wad and snd.wad (sound demo)
-Many Sounds and Sprites from Allied Marines.wad
+Status bar Imp Face: Impatience_52.wads
 
-Texture packs used:
+=== Texture packs used | Packs de texturas usadas ===
 Nightmare texture pack + Revamped COMPUTE1 texture: Nightmare
 32in24-15_tex_v2.wad //The obligatory texture pack
 OTEX //Another obligatory texture pack
@@ -14,3 +13,31 @@ smashudmf.pk3 //Breakable glass
 ultratex.wad
 CageTex2.wad
 BlackGreenTechTexturesPack.wad
+
+Post your doom textures DW thread{
+	Gez
+}
+
+=== Realm667 resource wads used | Recursos de realm667 usados ===
+RocketTurret.wad by gothic
+Allied Marines.wad by DBJ87
+DarkImpST.wad by Skulltag, Vader, Ghastly, Sandypaper
+BrokenLamp.wad by Ghastly_Dragon
+Chair.wad by Ghastly_Dragon
+GlassTechPillar.wad by Mor'ladim
+OilDrum.awd by Captain Toenail
+PipePack.wad
+UACHolograms.wad
+FlyingImp.wad
+Annihilator.wad //For UAC Cyberdemon
+
+//These only i picked the sprites for experimental weapon decoration.
+//De estos solo agarre sprites de pickup para las armas experimentales de decoracion
+BlackHoleGenerator.wad
+PlasmaSplitter.wad
+Karasawa.wad
+Channeler.wad
+LaserCannon.wad
+
+=== Sonidos | Sounds ===
+DSPLASMA from Doom 64 / PSX Doom

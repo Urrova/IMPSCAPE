@@ -8,6 +8,39 @@ brightmap TLITE6_5{
 	map TLITE6_5
 }
 
+brightmap texture COMPSTA1{
+	map "brightmaps/COMPSTA"
+}
+
+brightmap texture COMPSTA2{
+	map "brightmaps/COMPSTA"
+}
+
+//OCOMP***
+brightmap texture OCOMPA01{
+	map "brightmaps/ocomp/OCOMPAX1"
+}
+brightmap texture OCOMPA02{
+	map "brightmaps/ocomp/OCOMPAX2"
+}
+brightmap texture OCOMPA03{
+	map "brightmaps/ocomp/OCOMPAX3"
+}
+brightmap texture OCOMPA04{
+	map "brightmaps/ocomp/OCOMPAX4"
+}
+brightmap texture OCOMPA05{
+	map "brightmaps/ocomp/OCOMPAX5"
+}
+brightmap texture OCOMPA06{
+	map "brightmaps/ocomp/OCOMPAX6"
+}
+brightmap texture OCOMPA07{
+	map "brightmaps/ocomp/OCOMPAX7"
+}
+brightmap texture OCOMPA08{
+	map "brightmaps/ocomp/OCOMPAX8"
+}
 
 ////////////////////////////MARINES////////////////////////////////////////
 
