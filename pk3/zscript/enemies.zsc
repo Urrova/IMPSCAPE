@@ -874,6 +874,10 @@ class Pixel : Actor{
 		Damage 4;
 		bloodcolor "00 ff 00";
 		StencilColor "FF 00 00";
+		//Sound
+		AttackSound "Pixel/Jump";
+		DeathSound "Pixel/Death";
+		
 		Monster;
 		+SOLID;
 		+FLOAT;
@@ -917,6 +921,7 @@ class Pixel : Actor{
 			PIXL G 3 bright A_SetRenderStyle(1.0,STYLE_Normal);
 			TNT1 A 0{
 				int i;
+				A_Scream();
 				for (i = 0; i < 360; i +=5){
 					A_SpawnProjectile("PixelParticleLong",32,0,i,CMF_AIMDIRECTION|CMF_ABSOLUTEPITCH,0);
 				}
@@ -944,6 +949,10 @@ class DarkPixel : Actor{
 		bloodcolor "00 ff 00";
 		StencilColor "FF 00 00";
 		Renderstyle "Subtract";
+		//Sound
+		AttackSound "Pixel/Jump";
+		DeathSound "Pixel/Death";
+		
 		Monster;
 		+SOLID;
 		+FLOAT;
@@ -997,6 +1006,7 @@ class DarkPixel : Actor{
 			PIXL G 3 bright A_SetRenderStyle(1.0,STYLE_Subtract);
 			TNT1 A 0{
 				int i;
+				A_Scream();
 				for (i = 0; i < 360; i +=5){
 					A_SpawnProjectile("PixelParticleLong_Subtract",32,0,i,CMF_AIMDIRECTION|CMF_ABSOLUTEPITCH,0);
 				}

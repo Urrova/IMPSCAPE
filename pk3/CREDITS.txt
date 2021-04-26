@@ -7,5 +7,10 @@ Many Sounds and Sprites from Allied Marines.wad
 
 Texture packs used:
 Nightmare texture pack + Revamped COMPUTE1 texture: Nightmare
-OTEX
-IdTex
+32in24-15_tex_v2.wad //The obligatory texture pack
+OTEX //Another obligatory texture pack
+IdTex //Doom Beta Textures
+smashudmf.pk3 //Breakable glass
+ultratex.wad
+CageTex2.wad
+BlackGreenTechTexturesPack.wad

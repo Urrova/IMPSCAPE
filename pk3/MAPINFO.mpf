@@ -45,10 +45,16 @@ DoomEdNums
   13500 = Pixel
   13501 = DarkPixel
   //Particulas
-  15000 = CircleParticleSpawner_Red
-  15001 = CircleParticleSpawner_Green
-  15002 = CircleParticleSpawner_Blue
-  15003 = CircleParticleSpawner_Red_Big
-  15004 = CircleParticleSpawner_Green_Big
-  15005 = CircleParticleSpawner_Blue_Big
+  15000 = SpiralParticleSpawner_Red
+  15001 = SpiralParticleSpawner_Green
+  15002 = SpiralParticleSpawner_Blue
+  15003 = SpiralParticleSpawner_Red_Big
+  15004 = SpiralParticleSpawner_Green_Big
+  15005 = SpiralParticleSpawner_Blue_Big
+  15006 = CircleParticleSpawner_Red
+  15007 = CircleParticleSpawner_Green
+  15008 = CircleParticleSpawner_Blue
+  15009 = CircleParticleSpawner_Red_Big
+  15010 = CircleParticleSpawner_Green_Big
+  15011 = CircleParticleSpawner_Blue_Big
 }

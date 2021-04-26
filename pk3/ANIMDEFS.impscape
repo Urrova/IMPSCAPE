@@ -5,6 +5,16 @@ switch SHAWNBRK off sound PillarGlassBreak pic SHAWN2 tics 0
 switch DOORFSW1 on pic DOORFSW2 tics 0
 switch DOORFSW2 on pic DOORFSW1 tics 0
 
+//Vidrio que se rompe nuevo
+switch ZRIONGLS
+	on 
+		sound PillarGlassBreak
+		pic NJSMSH01 tics 5
+		pic NJSMSH02 tics 5
+		pic NJSMSH03 tics 5
+		pic NJSMSH04 tics 5
+		pic EMPTYTEX tics 5 //Que lindo, no me acepta ni "-" ni AASHITTY asi que tengo que poner una textura nueva vacia para esto. XD
+
 /////ANIMATED TEXTURES/////
 texture convna1 range convna4 tics 5
 texture FFIELDG1 range FFIELDGA tics 5

@@ -24,7 +24,13 @@ Marine/See1	"sounds/ALLYSITE"
 Marine/See2	"sounds/ALLYACTV"
 Marine/See3	"sounds/ALYBRDY"
 
-$random Marine/Site { Marine/See1 Marine/See2 Marine/See3}
+$random Marine/Site {Marine/See1 Marine/See2 Marine/See3}
+
+//Enemigos computadora
+Pixel/Death "sounds/8bExplosion1"
+Pixel/Jump "sounds/8bJump1"
+
+PixelShot/Spawn "sounds/8bLaser1"
 
 //Spellcard del touhou
 SPELLCARD "sounds/touhou/SPELLCARD"

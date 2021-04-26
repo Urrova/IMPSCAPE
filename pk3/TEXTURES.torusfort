@@ -1,8 +1,3 @@
-Texture "BADTILIN", 512, 128
-{
-	Patch "BADTILIN", 0, 0
-}
-
 Texture "BRONZEG1", 128, 128
 {
 	Patch "BRONZEG1", 0, 0
@@ -341,36 +336,6 @@ Texture "N_CYEL02", 64, 64
 Texture "N_CYEL01", 64, 64
 {
 	Patch "N_CYEL01", 0, 0
-}
-
-Texture "W113_1", 128, 128
-{
-	Patch "W113_1", 0, 0
-}
-
-Texture "W113_2", 32, 128
-{
-	Patch "W113_2", 0, 0
-}
-
-Texture "W113_3", 32, 128
-{
-	Patch "W113_3", 0, 0
-}
-
-Texture "W109_1", 128, 128
-{
-	Patch "W109_1", 0, 0
-}
-
-Texture "W109_2", 128, 128
-{
-	Patch "W109_2", 0, 0
-}
-
-Texture "W110_1", 256, 128
-{
-	Patch "W110_1", 0, 0
 }
 
 Texture "WFALL1", 64, 128

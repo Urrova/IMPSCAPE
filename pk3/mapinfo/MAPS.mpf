@@ -2,6 +2,7 @@ defaultmap{
 	sky1 = "ARES"
 	NoJump
 	NoCrouch
+	AllowFreelook
 	NoIntermission
 }
 
@@ -48,13 +49,13 @@ map MAP05 "The Bridge"{
 }
 
 map MAP06 "The Installament Exteriors"{
-	music = "D_THE_DA"
+	music = "D_TKWALL"
 	next = "MAP07"
 	LevelNum = 6
 }
 
 map MAP07 "The Supercomputer"{
-	music = "D_SHAWN"
+	music = "D_MARS"
 	next = "MAP08"
 	LevelNum = 7
 }

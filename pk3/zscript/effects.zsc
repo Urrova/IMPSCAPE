@@ -1,37 +1,23 @@
-//Glass Junks
-class GJunk : GlassJunk replaces GlassJunk{
-	int frame;
-	
+class GJunk : GlassJunk{
 	default{
-		+NOCLIP;
-		+NOBLOCKMAP;
-		speed 8;
-		vspeed 3;
-	}	
-
-	states{
-		spawn:
-			TNT1 A 0 {
-				//Tres sprites aleatorios, el numero lo tiene la variable frame
-				frame=random(0,2);
-				
-				if (frame==1){
-					A_Jump(256,"spr2");
-				}
-				else if (frame==2){
-					A_Jump(256,"spr2");
-				}
-				
-			}
-			JUNK A -1; //Si frame es 0
-			stop;
-		
-		spr2:
-			JUNK B -1; //1
-			stop;
-		
-		spr3:
-			JUNK B -1; //2
-			stop;
+		Radius 5;
+		Mass 5;
+		//Projectile;
+		-ACTIVATEPCROSS;
+		-ACTIVATEIMPACT;
+		-NOCLIP;
+		BounceType "HexenCompat";
+		BounceFactor 1;
+		Renderstyle "Translucent";
+		Alpha 0.4;
+		vspeed 20;
+	}
+	States{
+		Spawn:
+			NJGL A 4 ;
+			Stop;
+		Death:
+			NJGL E -1;
+			Stop;
 	}
 }

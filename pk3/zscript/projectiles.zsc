@@ -42,6 +42,9 @@ Class PixelProj : Actor{
 		Height 16;
 		Speed 20;
 		Damage 4;
+		
+		SeeSound "PixelShot/Spawn";
+		
 		Projectile;
 	}
 	States{

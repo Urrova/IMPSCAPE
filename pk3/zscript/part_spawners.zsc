@@ -1,4 +1,5 @@
-class CircleParticleSpawner_Red : Actor{
+//Spiral Particle Spawners
+class SpiralParticleSpawner_Red : Actor{
 	default{
 		+NOGRAVITY;
 	}
@@ -14,7 +15,7 @@ class CircleParticleSpawner_Red : Actor{
 	}
 }
 
-class CircleParticleSpawner_Green : Actor{
+class SpiralParticleSpawner_Green : Actor{
 	default{
 		+NOGRAVITY;
 	}
@@ -30,7 +31,7 @@ class CircleParticleSpawner_Green : Actor{
 	}
 }
 
-class CircleParticleSpawner_Blue : Actor{
+class SpiralParticleSpawner_Blue : Actor{
 	default{
 		+NOGRAVITY;
 	}
@@ -46,8 +47,8 @@ class CircleParticleSpawner_Blue : Actor{
 	}
 }
 
-
-class CircleParticleSpawner_Red_Big : Actor{
+//Spiral Particle Spawners (big)
+class SpiralParticleSpawner_Red_Big : Actor{
 	default{
 		+NOGRAVITY;
 	}
@@ -63,7 +64,7 @@ class CircleParticleSpawner_Red_Big : Actor{
 	}
 }
 
-class CircleParticleSpawner_Green_Big : Actor{
+class SpiralParticleSpawner_Green_Big : Actor{
 	default{
 		+NOGRAVITY;
 	}
@@ -79,7 +80,7 @@ class CircleParticleSpawner_Green_Big : Actor{
 	}
 }
 
-class CircleParticleSpawner_Blue_Big : Actor{
+class SpiralParticleSpawner_Blue_Big : Actor{
 	default{
 		+NOGRAVITY;
 	}
@@ -91,6 +92,176 @@ class CircleParticleSpawner_Blue_Big : Actor{
 			TNT1 A 0 A_SpawnParticle("#0000FF",SPF_FULLBRIGHT|SPF_RELPOS,50,5,angle,0,-40,0,0,0,3);
 			TNT1 A 0 A_SetAngle(angle+5);
 			TNT1 A 1;
+			loop;
+	}
+}
+
+//Circle Particle Spawners
+class CircleParticleSpawner_Red : Actor{
+	void _SpawnCircle(int radius){
+		int sum = 5;
+		for (int i = 0; i < 360; i+=sum){
+			A_SpawnParticle("#FF0000",SPF_FULLBRIGHT|SPF_RELPOS,50,2,angle,radius,0,0,0,0,1.5);
+			A_SetAngle(angle+sum);
+		}
+	}
+
+	default{
+		+NOGRAVITY;
+	}
+	states{
+		Spawn:
+			TNT1 A 5 _SpawnCircle(30);
+			TNT1 A 5 _SpawnCircle(25);
+			TNT1 A 5 _SpawnCircle(20);
+			TNT1 A 5 _SpawnCircle(15);
+			TNT1 A 5 _SpawnCircle(10);
+			TNT1 A 5 _SpawnCircle(5);
+			TNT1 A 5 _SpawnCircle(10);
+			TNT1 A 5 _SpawnCircle(15);
+			TNT1 A 5 _SpawnCircle(20);
+			TNT1 A 5 _SpawnCircle(25);
+			loop;
+	}
+}
+
+class CircleParticleSpawner_Green : Actor{
+	void _SpawnCircle(int radius){
+		int sum = 5;
+		for (int i = 0; i < 360; i+=sum){
+			A_SpawnParticle("#00FF00",SPF_FULLBRIGHT|SPF_RELPOS,50,2,angle,radius,0,0,0,0,1.5);
+			A_SetAngle(angle+sum);
+		}
+	}
+
+	default{
+		+NOGRAVITY;
+	}
+	states{
+		Spawn:
+			TNT1 A 5 _SpawnCircle(30);
+			TNT1 A 5 _SpawnCircle(25);
+			TNT1 A 5 _SpawnCircle(20);
+			TNT1 A 5 _SpawnCircle(15);
+			TNT1 A 5 _SpawnCircle(10);
+			TNT1 A 5 _SpawnCircle(5);
+			TNT1 A 5 _SpawnCircle(10);
+			TNT1 A 5 _SpawnCircle(15);
+			TNT1 A 5 _SpawnCircle(20);
+			TNT1 A 5 _SpawnCircle(25);
+			loop;
+	}
+}
+
+class CircleParticleSpawner_Blue : Actor{
+	void _SpawnCircle(int radius){
+		int sum = 5;
+		for (int i = 0; i < 360; i+=sum){
+			A_SpawnParticle("#0000FF",SPF_FULLBRIGHT|SPF_RELPOS,50,2,angle,radius,0,0,0,0,1.5);
+			A_SetAngle(angle+sum);
+		}
+	}
+
+	default{
+		+NOGRAVITY;
+	}
+	states{
+		Spawn:
+			TNT1 A 5 _SpawnCircle(30);
+			TNT1 A 5 _SpawnCircle(25);
+			TNT1 A 5 _SpawnCircle(20);
+			TNT1 A 5 _SpawnCircle(15);
+			TNT1 A 5 _SpawnCircle(10);
+			TNT1 A 5 _SpawnCircle(5);
+			TNT1 A 5 _SpawnCircle(10);
+			TNT1 A 5 _SpawnCircle(15);
+			TNT1 A 5 _SpawnCircle(20);
+			TNT1 A 5 _SpawnCircle(25);
+			loop;
+	}
+}
+
+//Circle Particle Spawners (big)
+class CircleParticleSpawner_Red_Big : Actor{
+	void _SpawnCircle(int radius){
+		int sum = 5;
+		for (int i = 0; i < 360; i+=sum){
+			A_SpawnParticle("#FF0000",SPF_FULLBRIGHT|SPF_RELPOS,50,5,angle,radius,0,0,0,0,3);
+			A_SetAngle(angle+sum);
+		}
+	}
+
+	default{
+		+NOGRAVITY;
+	}
+	states{
+		Spawn:
+			TNT1 A 5 _SpawnCircle(30*2);
+			TNT1 A 5 _SpawnCircle(25*2);
+			TNT1 A 5 _SpawnCircle(20*2);
+			TNT1 A 5 _SpawnCircle(15*2);
+			TNT1 A 5 _SpawnCircle(10*2);
+			TNT1 A 5 _SpawnCircle(5*2);
+			TNT1 A 5 _SpawnCircle(10*2);
+			TNT1 A 5 _SpawnCircle(15*2);
+			TNT1 A 5 _SpawnCircle(20*2);
+			TNT1 A 5 _SpawnCircle(25*2);
+			loop;
+	}
+}
+
+class CircleParticleSpawner_Green_Big : Actor{
+	void _SpawnCircle(int radius){
+		int sum = 5;
+		for (int i = 0; i < 360; i+=sum){
+			A_SpawnParticle("#00FF00",SPF_FULLBRIGHT|SPF_RELPOS,50,5,angle,radius,0,0,0,0,3);
+			A_SetAngle(angle+sum);
+		}
+	}
+
+	default{
+		+NOGRAVITY;
+	}
+	states{
+		Spawn:
+			TNT1 A 5 _SpawnCircle(30*2);
+			TNT1 A 5 _SpawnCircle(25*2);
+			TNT1 A 5 _SpawnCircle(20*2);
+			TNT1 A 5 _SpawnCircle(15*2);
+			TNT1 A 5 _SpawnCircle(10*2);
+			TNT1 A 5 _SpawnCircle(5*2);
+			TNT1 A 5 _SpawnCircle(10*2);
+			TNT1 A 5 _SpawnCircle(15*2);
+			TNT1 A 5 _SpawnCircle(20*2);
+			TNT1 A 5 _SpawnCircle(25*2);
+			loop;
+	}
+}
+
+class CircleParticleSpawner_Blue_Big : Actor{
+	void _SpawnCircle(int radius){
+		int sum = 5;
+		for (int i = 0; i < 360; i+=sum){
+			A_SpawnParticle("#0000FF",SPF_FULLBRIGHT|SPF_RELPOS,50,5,angle,radius,0,0,0,0,3);
+			A_SetAngle(angle+sum);
+		}
+	}
+
+	default{
+		+NOGRAVITY;
+	}
+	states{
+		Spawn:
+			TNT1 A 5 _SpawnCircle(30*2);
+			TNT1 A 5 _SpawnCircle(25*2);
+			TNT1 A 5 _SpawnCircle(20*2);
+			TNT1 A 5 _SpawnCircle(15*2);
+			TNT1 A 5 _SpawnCircle(10*2);
+			TNT1 A 5 _SpawnCircle(5*2);
+			TNT1 A 5 _SpawnCircle(10*2);
+			TNT1 A 5 _SpawnCircle(15*2);
+			TNT1 A 5 _SpawnCircle(20*2);
+			TNT1 A 5 _SpawnCircle(25*2);
 			loop;
 	}
 }

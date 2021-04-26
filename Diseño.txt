@@ -9,6 +9,7 @@ Enemigos nuevos:
 	- Enemigos controlados.
 	- Enemigos de computadora:
 		-Pixel: Te embiste y dispara pixeles pequeños.
+		-Pixel negro: Lo mismo que pixel pero negro y mas poderoso.
 	
 Jefes:
 	- Antivirus.
@@ -25,11 +26,13 @@ MAP01: Demon Storage (Prison) #4
 	con vos. Rompes la capsula y empezas a escapar. Aca te muestran como te moves, las orbes FirePowerUp,
 	los marines te atacan, y tenes que llegar a la salida. Sencillo.
 	
+	Tambien tenes que liberar otros demonios, para que luchen aliados a vos.
+	
 MAP02: Demon Control Lab #2
 	En este nivel te encontras con los demonios controlados (los grises), y algunos estan mejorados como el imp que
 	tiran 2 bolas en vez de una. En este nivel cerca del primer teletransportador se prende un campo de fuerza que 
 	hace que tengas que ir al principio para presionar un interruptor que lo desactiva, y que se spawneen mas enemigos.
-	NECESITA ALARGARLO CON ALGO.
+	Nivel con varias invasiones.
 	
 MAP03: Experimental Weapon Armory
 	Un nivel con armas experimentales.
@@ -41,6 +44,12 @@ MAP03: Experimental Weapon Armory
 MAP04: Computer Station (no se me ocurrio un nombre mejor)
 	Un nivel lleno de computadoras. En este nivel tenes que entrar en computadoras para abrir puertas, etc.
 	Dentro de las computadoras es estilo 8bit, con marcianos tipo spaceinvaders, con un shader stereo3D}
+	
+	En la segunda parte te teletransportas a un vacio con muchas computadoras, circuitos en el techo,
+	atravesado por una serie de puentes, por los que te vas moviendo.
+	y al final de esta un tubo muy grande, que da lugar a la tercera parte, que te teletransportas al tubo,
+	este te eleva y salis del nivel.
+	
 	Mecanicas nuevas:
 		- Te metes dentro de computadoras para activar cosas
 		- Un campo de fuerza que lo atravezas y da vuelta la gravedad
@@ -49,12 +58,14 @@ MAP05: The Bridge (TODO EN INGLOES XD)
 	Empezas en un edificio y salis a un puente. Aca hay marines, tanques, mas demonios grises. A la mitad viene un
 	avion y bombardea el puente partiendolo a la mitad. Desarrollar mas.
 		- El avion estaria muy bueno que sea un modelo 3D. Tengo que ver alguno que me guste y ver como poner el modelo.
-		- En un lugar tambien puedo poner un tanque. 
+		- En un lugar tambien puedo poner tanques
 	
 MAP06: Installament exteriors
+	Musica: Robotic Invasion
 	Mapa estilo ciudad en las afueras de la instalacion de la UAC. Al final se activa un campo de fuerza
 	que no te deja ir al sistema de teletransportadores, y tenes que entrar en la supercomputadora. 
-	Desarrollar mas.
+	Este mapa va a estar lleno de robots. Muchas torretas que te tiran misiles.
+	
 	
 MAP07: The supercomputer
 	Musica: Mirrored Mars
@@ -67,6 +78,14 @@ MAP08: Teleporter System
 	
 	El Sistema de teletransportadores tiene un sistema de computadoras alterno, por si la supercomputadora se daña
 	o alguien la sabotea, y se pueda usar como via de escape.
+	
+	MAP08 va a estar lleno de portales estilo prey, hasta en polyobjects, tipo uno que gira para cambiar 
+	un portal por otro portal
+	
+	Como va a estar lleno de portales, la ambientacion puede cambiar bastante. No mas solamente tema base,
+	ya que el imp se puede teletransportar a una base submarina, a la luna, etc desde ahi.
+	
+	La escena final tiene un portal al infierno. Ahi se enfrenta con el jefe
 	
 	
 	
