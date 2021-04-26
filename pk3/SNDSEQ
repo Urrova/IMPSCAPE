@@ -1,4 +1,27 @@
+//Sonido de movimiento de piso pa poyobjects
 :BigTurbine
 	door 1
-	playrepeat BigTurbineSound
+	playrepeat plats/pt1_mid
+end
+
+//Puertas 
+:Door1
+	door 2
+	playuntildone door1_start
+	playrepeat door1_mid
+	stopsound door1_end
+end
+
+:Door2
+	door 3
+	playuntildone door2_start
+	playrepeat door2_mid
+	stopsound door2_end
+end
+
+:Door3
+	door 4
+	playuntildone door3_start
+	playrepeat door3_mid
+	stopsound door3_end
 end

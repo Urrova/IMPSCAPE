@@ -12,6 +12,8 @@ DoomEdNums
 {
 //Items
   11000 = FirePowerUp
+  11001 = DarkImpOrb
+  11002 = FlyingImpOrb
 //Marines
   12000 = ShotgunMarineEnemy
   12001 = PistolMarineEnemy
@@ -39,4 +41,6 @@ DoomEdNums
   13010 = ControlledPainElemental
   13011 = ControlledRevenant
   13012 = ControlledSpiderMastermind
+//Computer enemies
+  13500 = Pixel
 }

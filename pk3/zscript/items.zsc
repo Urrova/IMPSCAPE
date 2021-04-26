@@ -1,0 +1,70 @@
+//Item que mejora la velocidad de disparo
+class FirePowerUp : inventory{
+	default{
+		inventory.amount 1;
+		inventory.maxamount 5;
+		inventory.PickUpMessage "Firepower upgraded! Now you shoot faster";
+	}
+	states{
+    Spawn:
+      MANA ABC 5;
+      loop;
+     }
+}
+
+//Item que te comvierte en un dark imp
+class DarkImpOrb : CustomInventory{
+	default{
+		inventory.amount 1;
+		inventory.maxamount 5;
+		inventory.PickUpMessage "Darkimp Time!";
+		+COUNTITEM;
+		//+INVENTORY.INVBAR;
+		//+FLOATBOB;
+	}
+	states{
+    Spawn:
+      MANA ABC 5;
+      loop;
+	Pickup: 
+		TNT1 A -1 A_GiveInventory("DarkImpTransform");
+		Stop;
+	}
+}
+
+class DarkImpTransform : PowerMorph{
+	default{
+		PowerMorph.PlayerClass "DarkImpPlayer";
+		PowerMorph.MorphStyle MRF_NEWTIDBEHAVIOUR|MRF_UNDOBYDEATH;
+		Powerup.duration 0x7FFFFFFF;
+	}
+}
+
+//Item que te convierte en un imp volador
+class FlyingImpOrb : CustomInventory{
+	default{
+		inventory.amount 1;
+		inventory.maxamount 5;
+		inventory.PickUpMessage "Flying Imp Time!";
+		+COUNTITEM;
+		//+INVENTORY.INVBAR;
+		//+FLOATBOB;
+	}
+	states{
+    Spawn:
+      MANA ABC 5;
+      loop;
+	Pickup: 
+		TNT1 A -1 A_GiveInventory("FlyingImpTransform");
+		Stop;
+	}
+}
+
+
+class FlyingImpTransform : PowerMorph{
+	default{
+		PowerMorph.PlayerClass "FlyingImpPlayer";
+		PowerMorph.MorphStyle MRF_NEWTIDBEHAVIOUR|MRF_UNDOBYDEATH;
+		Powerup.duration 0x7FFFFFFF;
+	}
+}

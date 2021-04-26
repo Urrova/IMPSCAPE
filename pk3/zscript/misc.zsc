@@ -1,0 +1,62 @@
+///////////PARTICULAS////////////////
+class PlasmaShotgunParticle : Actor{
+	default{
+		+NOGRAVITY;
+		+FLOAT;
+		translation 2;
+		renderstyle "Add";
+	}
+	states{
+		Spawn:
+			APLS A	 2 bright{
+				A_FadeOut(0.1,FTF_REMOVE);
+			}
+			Loop;
+		Death:
+			APLS A 1 bright;
+			TNT1 A -1;
+			stop;
+	}
+}
+
+class PixelParticleLong : Actor{
+	default{
+		Scale 2;
+		+NOGRAVITY;
+		+FLOAT;
+		Projectile;
+		Speed 10;
+	}
+	states{
+		Spawn:
+			PXWH A 2 bright{
+					A_FadeOut(0.01,FTF_REMOVE);
+				}
+			Loop;
+		Death:
+			PXWH A 1 bright;
+			TNT1 A -1;
+			stop;
+	}
+}
+
+class PixelParticleShort : Actor{
+	default{
+		Scale 2;
+		+NOCLIP;
+		+NOGRAVITY;
+		+FLOAT;
+		Projectile;
+	}
+	states{
+		Spawn:
+			PXWH A 2 bright{
+					A_FadeOut(0.1,FTF_REMOVE);
+				}
+			Loop;
+		Death:
+			PXWH A 1 bright;
+			TNT1 A -1;
+			stop;
+	}
+}

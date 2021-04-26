@@ -1,0 +1,64 @@
+IMPSCAPE - The escape from UAC
+
+Un mod de GZDoom donde sos un imp y tenes que escapar de la instalacion de la UAC donde te capturaron.
+Entonces sos un imp, atacas tirando bolas de fuego, o arañando.
+
+
+Enemigos nuevos:
+	- Marines (todas las armas)
+	- Enemigos controlados.
+	- Enemigos de computadora:
+		-Pixel: Te embiste y dispara pixeles pequeños.
+	
+Jefes:
+	- Antivirus.
+	- El jefe final.
+	
+Items:
+	- FirePowerUp: Hace que aceleres el disparo de bolas de fuego.
+	- DarkImpOrb: Te convierte en un darkimp. Tira bolas mas fuertes y va mas rapido.
+	- FlyingImpOrb: Te convierte en un imp volador. Volas.
+
+Niveles:
+MAP01: Demon Storage (Prison) #4
+	Este nivel es basicamente una carcel. Empezas dentro de una capsula donde hacen experimentos de control de demonios
+	con vos. Rompes la capsula y empezas a escapar. Aca te muestran como te moves, las orbes FirePowerUp,
+	los marines te atacan, y tenes que llegar a la salida. Sencillo.
+	
+MAP02: Demon Control Lab #2
+	En este nivel te encontras con los demonios controlados (los grises), y algunos estan mejorados como el imp que
+	tiran 2 bolas en vez de una. En este nivel cerca del primer teletransportador se prende un campo de fuerza que 
+	hace que tengas que ir al principio para presionar un interruptor que lo desactiva, y que se spawneen mas enemigos.
+	NECESITA ALARGARLO CON ALGO.
+	
+MAP03: Experimental Weapon Armory
+	Un nivel con armas experimentales.
+	Mecanicas nuevas:
+		- Laseres en el piso que te absorben, y te matan instantaneamente
+		- Un laser gigante que rompe una pared. Lo tenes que activar para continuar el mapa.
+		- Marines con railguns (debiles)
+		
+MAP04: Computer Station (no se me ocurrio un nombre mejor)
+	Un nivel lleno de computadoras. En este nivel tenes que entrar en computadoras para abrir puertas, etc.
+	Dentro de las computadoras es estilo 8bit, con marcianos tipo spaceinvaders, con un shader stereo3D}
+	Mecanicas nuevas:
+		- Te metes dentro de computadoras para activar cosas
+		- Un campo de fuerza que lo atravezas y da vuelta la gravedad
+		
+MAP05: The Bridge (TODO EN INGLOES XD)
+	Empezas en un edificio y salis a un puente. Aca hay marines, tanques, mas demonios grises. A la mitad viene un
+	avion y bombardea el puente partiendolo a la mitad. Desarrollar mas.
+	
+MAP06: Installament exteriors
+	Mapa estilo ciudad en las afueras de la instalacion de la UAC. Al final se activa un campo de fuerza
+	que no te deja ir al sistema de teletransportadores, y tenes que entrar en la supercomputadora. 
+	Desarrollar mas.
+	
+MAP07: The supercomputer
+	Musica: Mirrored Mars
+	Este es un mapa de computadora grande (tipo te metes en una computadora que es todo el mapa).
+	Al final te enfrentas a un gran antivirus. Desarrollar mas.
+
+MAP08: Teleporter System
+	Donde te tenes que teletransportar al infierno. Al final obviamente el jefe final. No danmaku, pero si dificil.
+	No tengo idea como va a ser, seguramente algun mech o algo asi.

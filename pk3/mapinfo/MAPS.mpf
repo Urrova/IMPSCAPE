@@ -1,20 +1,64 @@
 defaultmap{
+	sky1 = "ARES"
 	NoJump
+	NoCrouch
 	NoIntermission
 }
 
 map INTRO "XD"{
 	next = "MAP01"
+	LevelNum = 0
+}
+
+map TESTROOM "Fuck You So"{
+	music = "D_IN_CIT"
+	next = "MAP01"
+	LevelNum = 99
 }
 
 map MAP01 "Demon storage (prison) D"{
-	sky1 = "Sky1"
 	music = "D_IN_CIT"
 	next = "MAP02"
+	LevelNum = 1
 }
 
 map MAP02 "Demon control lab #2"{
-	sky1 = "Sky1"
 	music = "D_STALKS"
 	next = "MAP03"
+	LevelNum = 2
+}
+
+map MAP03 "Experimental Weapon Armory"{
+	music = "D_COUNTD"
+	next = "MAP04"
+	LevelNum = 3
+}
+
+map MAP04 "Abandoned Computer Station"{
+	music = "D_BETWEE"
+	next = "MAP05"
+	LevelNum = 4
+}
+
+map MAP05 "The Bridge"{
+	music = "D_DOOM"
+	next = "MAP06"
+	LevelNum = 5
+}
+
+map MAP06 "The Installament Exteriors"{
+	music = "D_THE_DA"
+	next = "MAP07"
+	LevelNum = 6
+}
+
+map MAP07 "The Supercomputer"{
+	music = "D_SHAWN"
+	next = "MAP08"
+	LevelNum = 7
+}
+
+map MAP08 "The teleporters system"{
+	music = "D_DDTBLU"
+	LevelNum = 8
 }

@@ -9,6 +9,9 @@ switch DOORFSW2 on pic DOORFSW1 tics 0
 texture convna1 range convna4 tics 5
 texture FFIELDG1 range FFIELDGA tics 5
 texture FFIELDR1 range FFIELDRA tics 5
+texture COMPRED1 range COMPRED3 tics 4
+texture ENERG01 range ENERG04 tics 4
+texture ENERGY01 range ENERGY04 tics 4
 
 /////ANIMATED FLATS/////
 flat convna1 range convna4 tics 5

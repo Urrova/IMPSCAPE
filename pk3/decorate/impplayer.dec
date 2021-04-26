@@ -8,15 +8,14 @@ actor ImpPlayer : PlayerPawn
 	Height 56
 	Mass 100
 	PainChance 255
-	player.maxhealth 60
+	player.maxhealth 100
 	player.soundclass "ImpPlayer"
 	player.morphweapon "ImpArm"
 	Player.ColorRange 0, 0
 	Player.DisplayName "Imp"
 	Player.StartItem "ImpArm"
-	Player.StartItem "PlayerIsImp"
 	Player.StartItem "MonsterMana", 1000
-
+	+NOSKIN
         
 	States
 	{
@@ -168,94 +167,22 @@ actor ImpArm : weapon
       stop
 
     AltFire:
-	
 	TNT1 A 0 A_JumpIfInventory("PowerStrength", 1, "Berserked")
 	Normal:
-	  IMPD A 0 A_JumpIfInventory("FirePowerUp",4,"MeeleVeryStrong")
-	  IMPD A 0 A_JumpIfInventory("FirePowerUp",3,"MeeleStrong")
-	  IMPD A 0 A_JumpIfInventory("FirePowerUp",2,"MeeleMid")
-	  IMPD A 0 A_JumpIfInventory("FirePowerUp",1,"MeeleWeak")
-      IMPD A 0 A_JumpIfInventory("FirePowerUp",0,"MeeleVeryWeak")
-	
-	  MeeleVeryWeak:
-		  IMPD BC 5
-		  IMPD D 5 A_CustomPunch (4)
-		  IMPD E 5
-		  TNT1 A 5 A_ReFire
-		  IMPD J 5
-		  goto ready
-	  MeeleWeak:
-		  IMPD BC 5
-		  IMPD D 5 A_CustomPunch (7)
-		  IMPD E 5
-		  TNT1 A 5 A_ReFire
-		  IMPD J 5
-		  goto ready
-	  MeeleMid:
-		  IMPD BC 5
-		  IMPD D 5 A_CustomPunch (11)
-		  IMPD E 5
-		  TNT1 A 5 A_ReFire
-		  IMPD J 5
-		  goto ready
-	 MeeleStrong:
-		  IMPD BC 5
-		  IMPD D 5 A_CustomPunch (13)
-		  IMPD E 5
-		  TNT1 A 5 A_ReFire
-		  IMPD J 5
-		  goto ready
-	  MeeleVeryStrong:
-		  IMPD BC 5
-		  IMPD D 5 A_CustomPunch (16)
-		  IMPD E 5
-		  TNT1 A 5 A_ReFire
-		  IMPD J 5
-		  goto ready
+		IMPD BC 5
+		IMPD D 5 A_CustomPunch (7)
+		IMPD E 5
+		TNT1 A 5 A_ReFire
+		IMPD J 5
+		goto ready
 		  
 	Berserked:
-	  IMPD A 0 A_JumpIfInventory("FirePowerUp",4,"BMeeleVeryStrong")
-	  IMPD A 0 A_JumpIfInventory("FirePowerUp",3,"BMeeleStrong")
-	  IMPD A 0 A_JumpIfInventory("FirePowerUp",2,"BMeeleMid")
-	  IMPD A 0 A_JumpIfInventory("FirePowerUp",1,"BMeeleWeak")
-      IMPD A 0 A_JumpIfInventory("FirePowerUp",0,"BMeeleVeryWeak")
-	
-	  BMeeleVeryWeak:
-		  IMPD BC 5
-		  IMPD D 5 A_CustomPunch (20)
-		  IMPD E 5
-		  TNT1 A 5 A_ReFire
-		  IMPD J 5
-		  goto ready
-	  BMeeleWeak:
-		  IMPD BC 5
-		  IMPD D 5 A_CustomPunch (35)
-		  IMPD E 5
-		  TNT1 A 5 A_ReFire
-		  IMPD J 5
-		  goto ready
-	  BMeeleMid:
-		  IMPD BC 5
-		  IMPD D 5 A_CustomPunch (55)
-		  IMPD E 5
-		  TNT1 A 5 A_ReFire
-		  IMPD J 5
-		  goto ready
-	 BMeeleStrong:
-		  IMPD BC 5
-		  IMPD D 5 A_CustomPunch (65)
-		  IMPD E 5
-		  TNT1 A 5 A_ReFire
-		  IMPD J 5
-		  goto ready
-	  BMeeleVeryStrong:
-		  IMPD BC 5
-		  IMPD D 5 A_CustomPunch (80)
-		  IMPD E 5
-		  TNT1 A 5 A_ReFire
-		  IMPD J 5
-		  goto ready
-	  
+		IMPD BC 5
+		IMPD D 5 A_CustomPunch (35)
+		IMPD E 5
+		TNT1 A 5 A_ReFire
+		IMPD J 5
+		goto ready
   }
 }
 
@@ -275,16 +202,3 @@ actor MonsterMana : ammo
       loop
   }
 }
-
-actor PlayerMonsterClassDefiner : inventory //this will be used to identify wich class the player is,
-{				 // this shouldn't be used directly, but inherited with the desired name
-  inventory.amount 1
-  inventory.maxamount 1
-  +INVENTORY.QUIET
-  +INVENTORY.UNDROPPABLE
-  +INVENTORY.HUBPOWER
-  +INVENTORY.ALWAYSPICKUP
-  +INVENTORY.IGNORESKILL
-}
-
-actor PlayerIsImp : PlayerMonsterClassDefiner {}

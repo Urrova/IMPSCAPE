@@ -1,0 +1,73 @@
+
+////////// IMP PLAYER //////////
+actor FlyingImpPlayer : PlayerPawn
+{
+    Speed 1.2
+	Health 100
+	Radius 20
+	Height 56
+	Mass 100
+	PainChance 255
+	player.maxhealth 120
+	player.soundclass "ImpPlayer"
+	player.morphweapon "ImpArm"
+	Player.ColorRange 0, 0
+	Player.DisplayName "DarkImp"
+	Player.StartItem "ImpArm"
+	Player.StartItem "MonsterMana", 1000
+	+NOSKIN
+        
+	States
+	{
+	Spawn:
+		AEIM AB 7
+		AEIM A 0 A_GiveInventory ("MonsterMana",1)
+		Loop
+	See:
+		AEIM AABBCCDD 3 
+		Loop
+	Missile:
+		AEIM EF 8
+ 		AEIM G  6
+		Goto Spawn
+	Melee:
+		AEIM EF 8
+ 		AEIM G  6
+		Goto Spawn
+	Pain:
+		AEIM H 4
+    	AEIM H 4 A_Pain
+		Goto Spawn
+	Death:
+		AEIM I 8 A_PlayerSkinCheck("AltSkinDeath")
+		AEIM J 8 A_PlayerScream
+		AEIM K 6
+    	AEIM L 6 A_NoBlocking
+    	AEIM M -1
+		Stop
+	XDeath:
+		AEIM N 5 A_PlayerSkinCheck("AltSkinXDeath")
+		AEIM O 5 A_XScream
+		AEIM P 5
+		AEIM Q 5 A_NoBlocking
+		AEIM RST 5
+    	AEIM U -1
+		Stop
+	AltSkinDeath:
+		AEIM I 8
+		AEIM J 8 A_PlayerScream
+		AEIM K 6
+		AEIM L 6 A_NoBlocking
+		AEIM M -1
+		Stop
+	AltSkinXDeath:
+		AEIM N 5 A_PlayerScream
+		AEIM O 5 A_NoBlocking
+		AEIM P 5
+		AEIM Q 5 A_SkullPop
+		AEIM RST 5
+    	AEIM U -1
+		Stop
+	}
+}
+

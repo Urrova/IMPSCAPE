@@ -1,5 +1,4 @@
-#include gldefs/UacHolograms.gld
-#include gldefs/OilDrum.gld
-#include gldefs/IMPSCAPE.gld
-#include gldefs/RocketTurret.gld
-#include gldefs/shaders.gld
+#include gldefs/dlights.gld //Dynamic lights and glows
+#include gldefs/shaders.gld //Shaders
+#include gldefs/bmaps.gld //Brightmaps
+#include gldefs/skyboxes.gld //Skyboxes

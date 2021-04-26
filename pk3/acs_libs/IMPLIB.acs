@@ -50,7 +50,6 @@ script "__endlib_Music_FadeOut" (void){
 	}
 }
 
-
 ///////////////////////////////DIALOGS//////////////////////////////////////////
 //Funcion para dialogos
 function void dialog(str name, str message, int namecolor, int msgcolor, int del){

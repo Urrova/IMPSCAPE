@@ -121,17 +121,15 @@ Death:
 }
 
 
-Actor PlasmaSpawnerGreen 900
-{
-Scale 0.5
-Renderstyle add
-+NOGRAVITY
-States
-{
-Spawn:
-	TNT1 A 2 BRIGHT A_SpawnItemEx("PlasmaSpawner", random(-16,16), random(-16,16), random(-4,-12), 0, 0, random(6,8),0,SXF_NOCHECKPOSITION)
-	Loop
-}
+Actor PlasmaSpawnerGreen 900{
+	Scale 0.5
+	Renderstyle add
+	+NOGRAVITY
+	States{
+		Spawn:
+			TNT1 A 2 BRIGHT A_SpawnItemEx("PlasmaSpawner", random(-16,16), random(-16,16), random(-4,-12), 0, 0, random(6,8),0,SXF_NOCHECKPOSITION)
+			Loop
+	}
 }
 
 

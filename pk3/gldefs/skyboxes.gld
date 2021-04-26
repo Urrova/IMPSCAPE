@@ -1,0 +1,8 @@
+skybox ARES fliptop{
+	ARES_RT
+	ARES_FT
+	ARES_LF
+	ARES_BK
+	ARES_UP
+	ARES_DN
+}

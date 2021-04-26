@@ -1,0 +1,55 @@
+class PlasmaShotgunBall : ArachnotronPlasma{
+	default{
+		translation 2;
+	}
+	states{
+		Spawn:
+			APLS AB 5 Bright{
+				A_SpawnItem("PlasmaShotgunParticle");
+			}
+			Loop;
+	}
+}
+
+Class DarkFast : Actor{
+  Default{
+    Radius 8;
+    Height 6;
+    Speed 18;
+    Damage 3;
+    RENDERSTYLE "ADD";
+    ALPHA 0.67;
+    SeeSound "imp/attack";
+    DeathSound "imp/shotx";
+    Decal "DoomImpScorch";
+    PROJECTILE;
+  }
+
+  States{
+  Spawn:
+    DKB1 AB 4 Bright;
+    Loop;
+  Death:
+    DKB1 CDE 4 Bright;
+    Stop;
+  }
+}
+
+Class PixelProj : Actor{
+	default{
+		Radius 8;
+		Scale 2;
+		Height 16;
+		Speed 20;
+		Damage 8;
+		Projectile;
+	}
+	States{
+	  Spawn:
+		PXWH A 1 Bright A_SpawnProjectile("PixelParticleShort",0,0);
+		Loop;
+	  Death:
+		PXWH A 4 Bright;
+		Stop;
+	}
+}

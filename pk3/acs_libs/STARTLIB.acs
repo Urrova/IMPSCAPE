@@ -1,9 +1,50 @@
 #library "STARTLIB"
 #include "zcommon.acs"
 
-//general start map script
-script 1000 ENTER{
+int ENTERMSG_COUNT = 7;
+int ENTERMSG_MAPS[7] = {2,3,4,5,6,7,8};
+
+//Script cuando empieza cualquier mapa.
+script "Init" ENTER{
 	SetMusicVolume(1.0);
 	SetPlayerProperty(1,0,PROP_TOTALLYFROZEN);
+	Thing_ChangeTID(0,1234);
+	//Si el jugador no es de clase ImpPlayer, lo transforma en un ImpPlayer
+	if (CheckActorClass(1234, "ImpPlayer")){
+		MorphActor(1234,"ImpPlayer");
+		TakeInventory("ImpArm",99);
+		TakeInventory("DarkImpArm",99);
+		GiveInventory("ImpArm",1);
+	}
+	
+	ACS_NamedExecute("FlyControl",0);
+	ACS_NamedExecute("EnterMSG",0);
+}
 
+//Script que controla si sos un flyimp, y si sos te da la habilidad de volar.
+script "FlyControl" (void){
+	if (CheckActorClass(1234, "FlyingImpPlayer")){
+		SetPlayerProperty(0,1,PROP_FLY);
+	}
+	else{
+		SetPlayerProperty(0,0,PROP_FLY);
+	}
+	delay(1);
+	restart;
+}
+
+//Script para el mensaje de "Entering: Nombre del mapa"
+script "EnterMSG" (void){
+	int entermsg_is = false;
+	//Itera por ENTERMSG_MAPS, chequea si en ese mapa tiene que salir el titulo
+	for (int i = 0; i < ENTERMSG_COUNT; i++){
+		if (GetLevelInfo(LEVELINFO_LEVELNUM) == ENTERMSG_MAPS[i])
+			entermsg_is = true;
+	}
+	//Termina el script si no
+	if (entermsg_is == false)
+		terminate;
+		
+	hudmessage(s:"Entering:";HUDMSG_FADEINOUT,18423,CR_TAN,0.5,0.25,2.0,1.0,1.0,1.0);
+	hudmessage(n:PRINTNAME_LEVELNAME;HUDMSG_FADEINOUT,18424,CR_TAN,0.5,0.3,2.0,1.0,1.0,1.0);
 }

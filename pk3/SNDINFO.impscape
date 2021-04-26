@@ -1,17 +1,40 @@
+//Computadoras
 compy1 "sounds/computer/Compy1.flac"
 compy2 "sounds/computer/Compy2.flac"
 compy3 "sounds/computer/Compy3.flac"
 compy4 "sounds/computer/Compy4.flac"
 compy5 "sounds/computer/DroneComputer.mp3"
 
+//Puertas
+door1_start	"sounds/doors/d1_start.wav"
+door1_mid	"sounds/doors/d1_mid.wav"
+door1_end	"sounds/doors/d1_end.wav"
+door2_start	"sounds/doors/d2_start.wav"
+door2_mid	"sounds/doors/d2_mid.wav"
+door2_end	"sounds/doors/d2_end.wav"
+door3_start	"sounds/doors/d3_start.wav"
+door3_mid	"sounds/doors/d3_mid.wav"
+door3_end	"sounds/doors/d3_end.wav"
+
+//Marines
+Marine/SawSite "sounds/ALLYSAWS"
+Marine/Active "sounds/ALLYACTV"
+Marine/See1	"sounds/ALLYSITE"
+Marine/See2	"sounds/ALLYACTV"
+Marine/See3	"sounds/ALYBRDY"
+
+$random Marine/Site { Marine/See1 Marine/See2 Marine/See3}
+
+//Spellcard del touhou
+SPELLCARD "sounds/touhou/SPELLCARD"
+
+//Declaracion sonidos ambientales
 $ambient 0 compy1 point continuous 1.0
 $ambient 1 compy2 point continuous 1.0
 $ambient 2 compy3 point continuous 1.0
 $ambient 3 compy4 point continuous 1.0
 $ambient 4 compy5 point continuous 1.0
 
-$alias BigTurbineSound "plats/pt1_mid" 
 
-
-///////////////MENU SOUNDS////////////////////
+///////////////SONIDOS MENU////////////////////
 menu/choose "sounds/menu/SELECTOK.wav"

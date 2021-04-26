@@ -1,0 +1,11 @@
+version "2.5"
+/*
+En este ZScript pongo includes a los otros archivos en el directiorio ZScript.
+*/
+
+#include "zscript/effects.zsc"
+#include "zscript/projectiles.zsc"
+#include "zscript/misc.zsc"
+#include "zscript/EventHandlers.zsc"
+#include "zscript/enemies.zsc"
+#include "zscript/items.zsc"

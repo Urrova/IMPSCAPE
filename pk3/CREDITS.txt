@@ -1,0 +1,11 @@
+Mod Maker: URROVA
+
+Imp Player: taken from Doom Empathy
+Rocket Turret: Gothic
+Some of the sounds from the ZDoom Demo Wad and snd.wad (sound demo)
+Many Sounds and Sprites from Allied Marines.wad
+
+Texture packs used:
+Nightmare texture pack
+Doom1 tex for Doom2
+IdTex

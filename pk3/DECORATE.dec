@@ -1,3 +1,7 @@
 #include decorate/decorations.dec
-#include decorate/impplayer.dec
 #include decorate/enemies.dec
+
+//Jugadores
+#include decorate/impplayer.dec
+#include decorate/darkimpplayer.dec
+#include decorate/flyingimpplayer.dec
