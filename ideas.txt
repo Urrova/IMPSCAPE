@@ -1,0 +1,7 @@
+impscape es un wad de doom en donde vos sos un imp, y los de la UAC te capturaron para experimentos.
+entonces vos tenes que escapar de la UAC, luchando contra los marines que estan ahi adentro.
+
+Aca hay una lista de ideas para implementar en el WAD:
+
+idea: La UAC esta haciendo experimento para controlar demonios. Asi que tambien debes luchar contra estos.
+idea: Podes liberar otros demonios que lucharan a tu favor.
