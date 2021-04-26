@@ -1,0 +1,21 @@
+//Texturas para reemplazar a las texturas de Doom1
+
+Texture "COMPTILE", 128, 128{
+	Patch "COMPS2", 0, 0
+}
+
+Texture "PLANET1", 256, 128{
+	Patch "COMPL2", 0, 0
+}
+
+Texture "COMPUTE1", 128, 128{
+	Patch "COMPUTE1", 0, 0
+}
+
+Texture "COMPUTE2", 256, 56{
+	Patch "COMPUTE2", 0, 0
+}
+
+Texture "DOORHI", 64, 128{
+	Patch "DOORHI", 0, 0
+}	

@@ -43,4 +43,12 @@ DoomEdNums
   13012 = ControlledSpiderMastermind
 //Computer enemies
   13500 = Pixel
+  13501 = DarkPixel
+  //Particulas
+  15000 = CircleParticleSpawner_Red
+  15001 = CircleParticleSpawner_Green
+  15002 = CircleParticleSpawner_Blue
+  15003 = CircleParticleSpawner_Red_Big
+  15004 = CircleParticleSpawner_Green_Big
+  15005 = CircleParticleSpawner_Blue_Big
 }

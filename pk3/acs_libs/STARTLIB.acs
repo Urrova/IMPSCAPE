@@ -9,6 +9,9 @@ script "Init" ENTER{
 	SetMusicVolume(1.0);
 	SetPlayerProperty(1,0,PROP_TOTALLYFROZEN);
 	Thing_ChangeTID(0,1234);
+	GiveInventory("MonsterMana",1000);
+	SetCVAR("Shader",0);
+	SetCVar("AllowFly",0);
 	//Si el jugador no es de clase ImpPlayer, lo transforma en un ImpPlayer
 	if (CheckActorClass(1234, "ImpPlayer")){
 		MorphActor(1234,"ImpPlayer");
@@ -23,7 +26,7 @@ script "Init" ENTER{
 
 //Script que controla si sos un flyimp, y si sos te da la habilidad de volar.
 script "FlyControl" (void){
-	if (CheckActorClass(1234, "FlyingImpPlayer")){
+	if (CheckActorClass(1234, "FlyingImpPlayer") || GetCVar("AllowFly")){
 		SetPlayerProperty(0,1,PROP_FLY);
 	}
 	else{

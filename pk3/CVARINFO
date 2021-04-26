@@ -9,3 +9,5 @@ user bool impscape_winned = false;
 user noarchive int Shader = 0;
 user noarchive float shd_s3d_disp = 0.005;
 user noarchive float shd_cntr_contrast = 2.0;
+
+user noarchive bool AllowFly = false;

@@ -48,6 +48,8 @@ MAP04: Computer Station (no se me ocurrio un nombre mejor)
 MAP05: The Bridge (TODO EN INGLOES XD)
 	Empezas en un edificio y salis a un puente. Aca hay marines, tanques, mas demonios grises. A la mitad viene un
 	avion y bombardea el puente partiendolo a la mitad. Desarrollar mas.
+		- El avion estaria muy bueno que sea un modelo 3D. Tengo que ver alguno que me guste y ver como poner el modelo.
+		- En un lugar tambien puedo poner un tanque. 
 	
 MAP06: Installament exteriors
 	Mapa estilo ciudad en las afueras de la instalacion de la UAC. Al final se activa un campo de fuerza
@@ -62,3 +64,18 @@ MAP07: The supercomputer
 MAP08: Teleporter System
 	Donde te tenes que teletransportar al infierno. Al final obviamente el jefe final. No danmaku, pero si dificil.
 	No tengo idea como va a ser, seguramente algun mech o algo asi.
+	
+	El Sistema de teletransportadores tiene un sistema de computadoras alterno, por si la supercomputadora se daña
+	o alguien la sabotea, y se pueda usar como via de escape.
+	
+	
+	
+IDEAS:
+
+idea: La UAC esta haciendo experimento para controlar demonios. Asi que tambien debes luchar contra estos.
+idea: Podes liberar otros demonios que lucharan a tu favor.
+idea: laseres hechos con polyobjects hechos con lineas de dos lados (transparencia aditiva)
+idea: laseres hechos con pisos 3D (transparencia aditiva)
+idea: plataformas hechas con un piso arriba, y un polyobject abajo. Los portales de sector me pueden servir.
+idea: puedo poner crushers estilo super mario (thomps), y que se puedan usar como ascensores para llegar a otra parte
+	modelo 3D quiza, son solo hacer un cubo y ponerle texturas nomas xD y me ahorro catorce millones de pisos 3D

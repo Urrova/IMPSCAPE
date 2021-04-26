@@ -13,6 +13,12 @@ texture COMPRED1 range COMPRED3 tics 4
 texture ENERG01 range ENERG04 tics 4
 texture ENERGY01 range ENERGY04 tics 4
 
+//Computadoras
+texture OCOMPA01 range OCOMPA08 tics 5
+texture OCOMPA11 range OCOMPA18 tics 5
+texture OCOMPA21 range OCOMPA28 tics 5
+texture OCOMPA31 range OCOMPA38 tics 5
+
 /////ANIMATED FLATS/////
 flat convna1 range convna4 tics 5
 flat NUKEGE1 range NUKEGE3 tics 5

@@ -6,6 +6,6 @@ Some of the sounds from the ZDoom Demo Wad and snd.wad (sound demo)
 Many Sounds and Sprites from Allied Marines.wad
 
 Texture packs used:
-Nightmare texture pack
-Doom1 tex for Doom2
+Nightmare texture pack + Revamped COMPUTE1 texture: Nightmare
+OTEX
 IdTex

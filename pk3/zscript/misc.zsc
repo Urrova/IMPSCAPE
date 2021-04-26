@@ -25,12 +25,12 @@ class PixelParticleLong : Actor{
 		+NOGRAVITY;
 		+FLOAT;
 		Projectile;
-		Speed 10;
+		Speed 20;
 	}
 	states{
 		Spawn:
 			PXWH A 2 bright{
-					A_FadeOut(0.01,FTF_REMOVE);
+					A_FadeOut(0.2,FTF_REMOVE);
 				}
 			Loop;
 		Death:
@@ -52,6 +52,28 @@ class PixelParticleShort : Actor{
 		Spawn:
 			PXWH A 2 bright{
 					A_FadeOut(0.1,FTF_REMOVE);
+				}
+			Loop;
+		Death:
+			PXWH A 1 bright;
+			TNT1 A -1;
+			stop;
+	}
+}
+
+class PixelParticleLong_Subtract : Actor{
+	default{
+		Scale 2;
+		+NOGRAVITY;
+		+FLOAT;
+		Projectile;
+		Speed 20;
+		Renderstyle "Subtract";
+	}
+	states{
+		Spawn:
+			PXWH A 2 bright{
+					A_FadeOut(0.2,FTF_REMOVE);
 				}
 			Loop;
 		Death:

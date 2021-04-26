@@ -16,7 +16,7 @@ Class DarkFast : Actor{
     Radius 8;
     Height 6;
     Speed 18;
-    Damage 3;
+    Damage 4;
     RENDERSTYLE "ADD";
     ALPHA 0.67;
     SeeSound "imp/attack";
@@ -41,7 +41,7 @@ Class PixelProj : Actor{
 		Scale 2;
 		Height 16;
 		Speed 20;
-		Damage 8;
+		Damage 4;
 		Projectile;
 	}
 	States{
@@ -49,7 +49,26 @@ Class PixelProj : Actor{
 		PXWH A 1 Bright A_SpawnProjectile("PixelParticleShort",0,0);
 		Loop;
 	  Death:
-		PXWH A 4 Bright;
+		PXWH A 1 Bright;
 		Stop;
+	}
+}
+
+class Bullet : Actor{
+	default{
+		Radius 4;
+		height 8;
+		damage 2;
+		speed 60;
+		PROJECTILE;
+		+NOGRAVITY;
+	}
+	states{
+		Spawn:
+			BLLT A 1 Bright;
+			Loop;
+		  Death:
+			BLLT A 1 Bright;
+			Stop;
 	}
 }

@@ -38,6 +38,7 @@ map MAP04 "Abandoned Computer Station"{
 	music = "D_BETWEE"
 	next = "MAP05"
 	LevelNum = 4
+	Sky1 = "TEKWALL4"
 }
 
 map MAP05 "The Bridge"{
