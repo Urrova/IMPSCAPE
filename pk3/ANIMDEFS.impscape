@@ -1,0 +1,33 @@
+/////SWITCHES/////
+switch SHAWN2 on sound PillarGlassBreak pic SHAWNBRK  tics 0
+switch SHAWNBRK off sound PillarGlassBreak pic SHAWN2 tics 0
+
+switch DOORFSW1 on pic DOORFSW2 tics 0
+switch DOORFSW2 on pic DOORFSW1 tics 0
+
+/////ANIMATED TEXTURES/////
+texture convna1 range convna4 tics 5
+texture FFIELDG1 range FFIELDGA tics 5
+texture FFIELDR1 range FFIELDRA tics 5
+
+/////ANIMATED FLATS/////
+flat convna1 range convna4 tics 5
+flat NUKEGE1 range NUKEGE3 tics 5
+flat NUKEGE4 range NUKEGE6 tics 5
+
+/////WARPS/////
+warp flat NUKAGE1
+warp flat NUKAGE2
+warp flat NUKAGE3
+
+warp2 flat LAVA1
+warp2 flat LAVA2
+warp2 flat LAVA3
+warp2 flat LAVA4
+
+warp2 flat FWATER1
+warp2 flat FWATER2
+warp2 flat FWATER3
+warp2 flat FWATER4
+
+

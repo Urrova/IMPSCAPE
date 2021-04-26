@@ -1,0 +1,4 @@
+BarrelFire/Start	DSFIRSTA
+
+BarrelFire/Loop		DSFIRLOP
+$limit BarrelFire/Loop	0

@@ -1,0 +1,9 @@
+#library "STARTLIB"
+#include "zcommon.acs"
+
+//general start map script
+script 1000 ENTER{
+	SetMusicVolume(1.0);
+	SetPlayerProperty(1,0,PROP_TOTALLYFROZEN);
+
+}

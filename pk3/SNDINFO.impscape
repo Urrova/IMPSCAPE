@@ -1,0 +1,17 @@
+compy1 "sounds/computer/Compy1.flac"
+compy2 "sounds/computer/Compy2.flac"
+compy3 "sounds/computer/Compy3.flac"
+compy4 "sounds/computer/Compy4.flac"
+compy5 "sounds/computer/DroneComputer.mp3"
+
+$ambient 0 compy1 point continuous 1.0
+$ambient 1 compy2 point continuous 1.0
+$ambient 2 compy3 point continuous 1.0
+$ambient 3 compy4 point continuous 1.0
+$ambient 4 compy5 point continuous 1.0
+
+$alias BigTurbineSound "plats/pt1_mid" 
+
+
+///////////////MENU SOUNDS////////////////////
+menu/choose "sounds/menu/SELECTOK.wav"

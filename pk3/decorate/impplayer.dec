@@ -1,0 +1,290 @@
+
+////////// IMP PLAYER //////////
+actor ImpPlayer : PlayerPawn
+{
+    Speed 1
+	Health 100
+	Radius 20
+	Height 56
+	Mass 100
+	PainChance 255
+	player.maxhealth 60
+	player.soundclass "ImpPlayer"
+	player.morphweapon "ImpArm"
+	Player.ColorRange 0, 0
+	Player.DisplayName "Imp"
+	Player.StartItem "ImpArm"
+	Player.StartItem "PlayerIsImp"
+	Player.StartItem "MonsterMana", 1000
+
+        
+	States
+	{
+	Spawn:
+		TROO AB 7
+		TROO A 0 A_GiveInventory ("MonsterMana",1)
+		Loop
+	See:
+		TROO AABBCCDD 3 
+		Loop
+	Missile:
+		TROO EF 8
+ 		TROO G  6
+		Goto Spawn
+	Melee:
+		TROO EF 8
+ 		TROO G  6
+		Goto Spawn
+	Pain:
+		TROO H 4
+    		TROO H 4 A_Pain
+		Goto Spawn
+	Death:
+		TROO I 8 A_PlayerSkinCheck("AltSkinDeath")
+		TROO J 8 A_PlayerScream
+		TROO K 6
+    		TROO L 6 A_NoBlocking
+    		TROO M -1
+		Stop
+	XDeath:
+		TROO N 5 A_PlayerSkinCheck("AltSkinXDeath")
+		TROO O 5 A_XScream
+		TROO P 5
+		TROO Q 5 A_NoBlocking
+		TROO RST 5
+    		TROO U -1
+		Stop
+	AltSkinDeath:
+		TROO I 8
+		TROO J 8 A_PlayerScream
+		TROO K 6
+		TROO L 6 A_NoBlocking
+		TROO M -1
+		Stop
+	AltSkinXDeath:
+		TROO N 5 A_PlayerScream
+		TROO O 5 A_NoBlocking
+		TROO P 5
+		TROO Q 5 A_SkullPop
+		TROO RST 5
+    		TROO U -1
+		Stop
+	}
+  }
+
+
+actor ImpArm : weapon
+{
+  radius 20
+  height 20
+  obituary "%o ate some k%'s IMP fire"
+  inventory.pickupmessage "IMP-MAN"
+  attacksound "imp/melee"
+  weapon.selectionorder 2500
+  weapon.kickback 200
+  weapon.ammotype "MonsterMana"
+  weapon.ammouse1 5
+  weapon.ammouse2 0
+  weapon.ammogive 500
+  weapon.SlotNumber 1
+  
+  
+  States
+  {
+  
+	Spawn:
+		MANA A 2
+		loop
+    Deselect: 
+      IMPD A 1 A_Lower 
+      LOOP 
+    Select: 
+      IMPD A 1 A_Raise 
+      LOOP
+    Ready: 
+      IMPD A 7 A_WeaponReady
+      IMPD A 0 A_GiveInventory ("MonsterMana",1)
+      LOOP
+    Fire:
+      IMPD A 0 A_JumpIfNoAmmo ("AltFire")
+	  //Aca salta a un estado depende cuantos FirePowerUp tengas.
+	  //Osea, cuantos mas FirePowerUp tengas, mas rapido disparas.
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",4,"FireVeryFast")
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",3,"FireFast")
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",2,"FireMid")
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",1,"FireSlow")
+      IMPD A 0 A_JumpIfInventory("FirePowerUp",0,"FireVerySlow")
+	  
+	  //Muy lento (imp normal)
+	  FireVerySlow:
+		IMPD F 5
+		IMPD G 5 A_GunFlash
+		IMPD H 5 A_FireCustomMisSile ("DoomImpBall")
+		IMPD I 5
+		TNT1 A 5 A_ReFire
+		IMPD J 5 
+		Goto Ready
+	  //Lento
+	  FireSlow:
+		IMPD F 4
+		IMPD G 4 A_GunFlash
+		IMPD H 4 A_FireCustomMisSile ("DoomImpBall")
+		IMPD I 4
+		TNT1 A 4 A_ReFire
+		IMPD J 4 
+		Goto Ready
+	  //Normal
+	  FireMid:
+		IMPD F 3
+		IMPD G 3 A_GunFlash
+		IMPD H 3 A_FireCustomMisSile ("DoomImpBall")
+		IMPD I 3
+		TNT1 A 3 A_ReFire
+		IMPD J 3 
+		Goto Ready
+	  //Rapido
+	  FireFast:
+		IMPD F 2
+		IMPD G 2 A_GunFlash
+		IMPD H 2 A_FireCustomMisSile ("DoomImpBall")
+		IMPD I 2
+		TNT1 A 2 A_ReFire
+		IMPD J 2 
+		Goto Ready
+	  //Muy rapido
+	  FireVeryFast:
+		IMPD F 1
+		IMPD G 1 A_GunFlash
+		IMPD H 1 A_FireCustomMisSile ("DoomImpBall")
+		IMPD I 1
+		TNT1 A 1 A_ReFire
+		IMPD J 1 
+		Goto Ready
+		
+    Flash:
+      TNT1 A 5
+      TNT1 A 5 bright A_Light1
+      TNT1 A 0 A_Light0
+      stop
+
+    AltFire:
+	
+	TNT1 A 0 A_JumpIfInventory("PowerStrength", 1, "Berserked")
+	Normal:
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",4,"MeeleVeryStrong")
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",3,"MeeleStrong")
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",2,"MeeleMid")
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",1,"MeeleWeak")
+      IMPD A 0 A_JumpIfInventory("FirePowerUp",0,"MeeleVeryWeak")
+	
+	  MeeleVeryWeak:
+		  IMPD BC 5
+		  IMPD D 5 A_CustomPunch (4)
+		  IMPD E 5
+		  TNT1 A 5 A_ReFire
+		  IMPD J 5
+		  goto ready
+	  MeeleWeak:
+		  IMPD BC 5
+		  IMPD D 5 A_CustomPunch (7)
+		  IMPD E 5
+		  TNT1 A 5 A_ReFire
+		  IMPD J 5
+		  goto ready
+	  MeeleMid:
+		  IMPD BC 5
+		  IMPD D 5 A_CustomPunch (11)
+		  IMPD E 5
+		  TNT1 A 5 A_ReFire
+		  IMPD J 5
+		  goto ready
+	 MeeleStrong:
+		  IMPD BC 5
+		  IMPD D 5 A_CustomPunch (13)
+		  IMPD E 5
+		  TNT1 A 5 A_ReFire
+		  IMPD J 5
+		  goto ready
+	  MeeleVeryStrong:
+		  IMPD BC 5
+		  IMPD D 5 A_CustomPunch (16)
+		  IMPD E 5
+		  TNT1 A 5 A_ReFire
+		  IMPD J 5
+		  goto ready
+		  
+	Berserked:
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",4,"BMeeleVeryStrong")
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",3,"BMeeleStrong")
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",2,"BMeeleMid")
+	  IMPD A 0 A_JumpIfInventory("FirePowerUp",1,"BMeeleWeak")
+      IMPD A 0 A_JumpIfInventory("FirePowerUp",0,"BMeeleVeryWeak")
+	
+	  BMeeleVeryWeak:
+		  IMPD BC 5
+		  IMPD D 5 A_CustomPunch (20)
+		  IMPD E 5
+		  TNT1 A 5 A_ReFire
+		  IMPD J 5
+		  goto ready
+	  BMeeleWeak:
+		  IMPD BC 5
+		  IMPD D 5 A_CustomPunch (35)
+		  IMPD E 5
+		  TNT1 A 5 A_ReFire
+		  IMPD J 5
+		  goto ready
+	  BMeeleMid:
+		  IMPD BC 5
+		  IMPD D 5 A_CustomPunch (55)
+		  IMPD E 5
+		  TNT1 A 5 A_ReFire
+		  IMPD J 5
+		  goto ready
+	 BMeeleStrong:
+		  IMPD BC 5
+		  IMPD D 5 A_CustomPunch (65)
+		  IMPD E 5
+		  TNT1 A 5 A_ReFire
+		  IMPD J 5
+		  goto ready
+	  BMeeleVeryStrong:
+		  IMPD BC 5
+		  IMPD D 5 A_CustomPunch (80)
+		  IMPD E 5
+		  TNT1 A 5 A_ReFire
+		  IMPD J 5
+		  goto ready
+	  
+  }
+}
+
+
+
+actor MonsterMana : ammo
+{
+  inventory.amount 50
+  inventory.maxamount 1000
+  inventory.icon "MANAB0"
+  RENDERSTYLE TRANSLUCENT
+  ALPHA 0.5
+  states
+  {
+    Spawn:
+      MANA ABC 5
+      loop
+  }
+}
+
+actor PlayerMonsterClassDefiner : inventory //this will be used to identify wich class the player is,
+{				 // this shouldn't be used directly, but inherited with the desired name
+  inventory.amount 1
+  inventory.maxamount 1
+  +INVENTORY.QUIET
+  +INVENTORY.UNDROPPABLE
+  +INVENTORY.HUBPOWER
+  +INVENTORY.ALWAYSPICKUP
+  +INVENTORY.IGNORESKILL
+}
+
+actor PlayerIsImp : PlayerMonsterClassDefiner {}

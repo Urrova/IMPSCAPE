@@ -1,0 +1,201 @@
+type = "Doom Builder Map Settings Configuration";
+gameconfig = "GZDoom_DoomUDMF.cfg";
+strictpatches = 0;
+
+maps
+{
+	
+	MAP03
+	{
+		defaultwalltexture = "STARGR1";
+		overridemiddletexture = false;
+		defaultceiltexture = "NFMTSQ02";
+		overrideceiltexture = false;
+		custombrightness = 196;
+		scriptcompiler = "zdoom_acs.cfg";
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 1;
+				location = "C:\\Users\\DELLNEGRA\\Documents\\Proyectos\\DOOM\\IMPSCAPE\\pk3";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+			}
+		}
+		viewpositiony = 2447.766f;
+		viewpositionx = 4754.239f;
+		customceilheight = 128;
+		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -512;
+					outerright = 0;
+					outertop = 512;
+					outerbottom = 0;
+				}
+			}
+			
+			stairsectorbuilder
+			{
+				
+				prefabs
+				{
+					
+					prefab1
+					{
+						name = "[Previous]";
+						numberofsectors = 4;
+						outervertexmultiplier = 1;
+						innervertexmultiplier = 1;
+						stairtype = 0;
+						sectordepth = 8;
+						spacing = 0;
+						frontside = true;
+						singlesectors = false;
+						distinctsectors = false;
+						singledirection = false;
+						distinctbaseheights = true;
+						flipping = 0;
+						numberofcontrolpoints = 1;
+						applyfloormod = true;
+						floormod = 0;
+						applyceilingmod = true;
+						ceilingmod = 0;
+						applyfloortexture = false;
+						floortexture = "";
+						applyceilingtexture = false;
+						ceilingtexture = "";
+						applyuppertexture = false;
+						uppertexture = "-";
+						upperunpegged = true;
+						applymiddletexture = false;
+						middletexture = "-";
+						applylowertexture = false;
+						lowertexture = "BRGRGY22";
+						lowerunpegged = true;
+					}
+				}
+			}
+		}
+		customfloorheight = 0;
+		
+		grid
+		{
+			backoffsetx = 0;
+			backsource = 0;
+			gridoriginy = 0;
+			backscaley = 100;
+			gridrotate = 0;
+			backscalex = 100;
+			gridoriginx = 0;
+			gridsize = 128;
+			background = "";
+			backoffsety = 0;
+		}
+		viewscale = 0.1378579f;
+		defaulttoptexture = "STARGR1";
+		overridebottomtexture = false;
+		useresourcesinreadonlymode = false;
+		defaultbottomtexture = "STARGR1";
+		defaultfloortexture = "NFMTSQ02";
+		overrideceilheight = false;
+		overridebrightness = false;
+		overridefloorheight = false;
+		overridetoptexture = false;
+		uselongtexturenames = true;
+		overridefloortexture = false;
+		
+		fieldtypes
+		{
+			
+			linedef
+			{
+				renderstyle = 2;
+				alpha = 1;
+				locknumber = 0;
+			}
+			
+			sidedef
+			{
+				offsetx_mid = 1;
+				offsety_mid = 1;
+				offsetx_top = 1;
+				offsetx_bottom = 1;
+				offsety_bottom = 1;
+				offsety_top = 1;
+				light = 0;
+				scaley_mid = 1;
+				scaley_bottom = 1;
+				scalex_bottom = 1;
+				lightabsolute = 3;
+			}
+			
+			sector
+			{
+				xpanningfloor = 1;
+				ypanningfloor = 1;
+				xpanningceiling = 1;
+				ypanningceiling = 1;
+				rotationfloor = 1;
+				rotationceiling = 1;
+				ceilingglowcolor = 0;
+				ceilingglowheight = 1;
+				xscaleceiling = 1;
+				yscaleceiling = 1;
+				xscalefloor = 1;
+				yscalefloor = 1;
+				lightfloorabsolute = 3;
+				lightfloor = 0;
+				fadecolor = 0;
+				user_managed_3d_floor = 3;
+				soundsequence = 2;
+				lightceiling = 0;
+				lightcolor = 0;
+				gravity = 1;
+				color_ceiling = 0;
+				color_walltop = 0;
+				damagetype = 2;
+				damageamount = 0;
+				floor_reflect = 1;
+				color_wallbottom = 0;
+				color_floor = 0;
+			}
+		}
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+			}
+			
+			document1
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 4699;
+				firstvisibleline = 174;
+				activetab = true;
+			}
+		}
+	}
+}

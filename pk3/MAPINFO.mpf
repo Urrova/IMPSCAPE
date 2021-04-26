@@ -1,0 +1,42 @@
+include mapinfo/MGAMEINFO.mpf
+include mapinfo/MAPS.mpf
+include mapinfo/SKILLS.mpf
+include mapinfo/CLUSTERS.mpf
+include mapinfo/SPAWNNUMS.mpf
+include mapinfo/EPISODES.mpf
+
+
+//Los DoomEdNums los pongo aca por que si no no me los detecta
+//Ningun editor de mapas :/
+DoomEdNums
+{
+//Items
+  11000 = FirePowerUp
+//Marines
+  12000 = ShotgunMarineEnemy
+  12001 = PistolMarineEnemy
+  12002 = FistMarineEnemy
+  12003 = ChaingunMarineEnemy
+  12004 = RocketMarineEnemy
+  12005 = PlasmaMarineEnemy
+  12006 = BFGMarineEnemy
+  12007 = ChainsawMarineEnemy
+  12008 = SShotgunMarineEnemy
+  12009 = RailgunMarineEnemy
+  12010 = SubPlasmaMarineEnemy
+  12011 = PlasmaShotgunMarineEnemy
+//Controlled monsters
+  13000 = ControlledImp
+  13001 = ControlledPinky
+  13002 = ControlledHellKnight
+  13003 = ControlledBaronOfHell
+  13004 = ControlledLostSoul
+  13005 = ControlledArachnotron
+  13006 = ControlledArchvile
+  13007 = ControlledCacodemon
+  13008 = ControlledCyberdemon
+  13009 = ControlledFatso
+  13010 = ControlledPainElemental
+  13011 = ControlledRevenant
+  13012 = ControlledSpiderMastermind
+}

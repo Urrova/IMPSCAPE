@@ -1,0 +1,7 @@
+GameInfo{
+   PlayerClasses = "ImpPlayer"
+   DimColor = "00 FF 00"
+   DimAmount = 0.5
+   BlurAmount = 0.0
+   AddEventHandlers = "ShaderHandler"
+}

@@ -1,0 +1,20 @@
+defaultmap{
+	NoJump
+	NoIntermission
+}
+
+map INTRO "XD"{
+	next = "MAP01"
+}
+
+map MAP01 "Demon storage (prison) D"{
+	sky1 = "Sky1"
+	music = "D_IN_CIT"
+	next = "MAP02"
+}
+
+map MAP02 "Demon control lab #2"{
+	sky1 = "Sky1"
+	music = "D_STALKS"
+	next = "MAP03"
+}

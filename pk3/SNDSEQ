@@ -1,0 +1,4 @@
+:BigTurbine
+	door 1
+	playrepeat BigTurbineSound
+end

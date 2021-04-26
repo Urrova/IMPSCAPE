@@ -1,0 +1,45 @@
+////Green
+PointLight UAC1
+{
+	color 0.0 1.0 0.0
+    size 26
+}
+
+Object UACHolo1
+{
+FRAME UAC1 { light UAC1 }
+}
+Object UACHolo2
+{
+FRAME UAC1 { light UAC1 }
+}
+////Cyan
+PointLight UAC2
+{
+	color 0.0 0.3 0.5
+    size 26
+}
+
+Object UACHolo3
+{
+FRAME UAC2 { light UAC2 }
+}
+Object UACHolo4
+{
+FRAME UAC2 { light UAC2 }
+}
+////Orange
+PointLight UAC3
+{
+	color 0.5 0.3 0.0
+    size 26
+}
+
+Object UACHolo5
+{
+FRAME UAC3 { light UAC3 }
+}
+Object UACHolo6
+{
+FRAME UAC3 { light UAC3 }
+}

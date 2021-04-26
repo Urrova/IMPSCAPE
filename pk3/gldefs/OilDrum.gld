@@ -1,0 +1,21 @@
+
+flickerlight2 BARRELFLAME
+{
+    color 1.0 0.9 0.0
+    size 40
+    secondarySize 46
+    interval 0.1
+    offset 0 0 0
+}
+
+object BarrelFlames
+{
+    frame OILF { light BARRELFLAME }
+}
+
+object OilDrum
+{
+    frame OILDB { light ROCKET_X1 }
+    frame OILDC { light ROCKET_X2 }
+    frame OILDD { light ROCKET_X3 }
+}

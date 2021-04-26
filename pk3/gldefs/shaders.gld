@@ -1,0 +1,16 @@
+HardwareShader PostProcess scene {
+	Name "Stereo3D"
+	Shader "shaders/STEREO3D.fp" 330
+	Uniform float displacement
+}
+
+HardwareShader PostProcess scene {
+	Name "Negative"
+	Shader "shaders/NEGATIVE.fp" 330
+}
+
+HardwareShader PostProcess scene {
+	Name "Contrast"
+	Shader "shaders/Contrast.fp" 330
+	Uniform float contrast
+}

@@ -1,0 +1,11 @@
+user int impscape_language = 0;
+
+//CVar de ver si gano o no gano
+//Para desbloquear el extra stage Ya, te lo pongo aca vos hace lo que quieras 
+//si queres hacer trampa hace trampa, no me importa.
+user bool impscape_winned = false;
+
+//Shaders
+user noarchive int Shader = 0;
+user noarchive float shd_s3d_disp = 0.005;
+user noarchive float shd_cntr_contrast = 2.0;

@@ -1,0 +1,31 @@
+brightmap liteblu4{
+	map liteblu4
+}
+brightmap lite3{
+	map lite3
+}
+brightmap TLITE6_5{
+	map TLITE6_5
+}
+
+//Glows
+glow{
+	Flats{
+		NUKAGE1
+		NUKAGE2
+		NUKAGE3
+		
+		lite5
+		FLOOR1_6
+		
+		LAVA1
+		LAVA2
+		LAVA3
+		LAVA4
+	}
+	Walls{
+		NUKAGE1
+		NUKAGE2
+		NUKAGE3
+	}
+}

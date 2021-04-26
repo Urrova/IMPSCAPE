@@ -1,0 +1,586 @@
+Texture "BADTILIN", 512, 128
+{
+	Patch "BADTILIN", 0, 0
+}
+
+Texture "BRONZEG1", 128, 128
+{
+	Patch "BRONZEG1", 0, 0
+}
+
+Texture "BRONZEG2", 128, 128
+{
+	Patch "BRONZEG2", 0, 0
+}
+
+Texture "BRONZEG3", 128, 128
+{
+	Patch "BRONZEG3", 0, 0
+}
+
+Texture "BRONZEG4", 128, 128
+{
+	Patch "BRONZEG4", 0, 0
+}
+
+Texture "BRONZEG5", 128, 128
+{
+	Patch "BRONZEG5", 0, 0
+}
+
+Texture "BRONZEG6", 128, 128
+{
+	Patch "BRONZEG6", 0, 0
+}
+
+Texture "BRONZEB1", 128, 128
+{
+	Patch "BRONZEB1", 0, 0
+}
+
+Texture "BRONZEB2", 128, 128
+{
+	Patch "BRONZEB2", 0, 0
+}
+
+Texture "BRONZEB3", 128, 128
+{
+	Patch "BRONZEB3", 0, 0
+}
+
+Texture "BRONZEB4", 128, 128
+{
+	Patch "BRONZEB4", 0, 0
+}
+
+Texture "BRONZEB6", 128, 128
+{
+	Patch "BRONZEB6", 0, 0
+}
+
+Texture "BRONZEB5", 128, 128
+{
+	Patch "BRONZEB5", 0, 0
+}
+
+Texture "BRGRBR03", 128, 128
+{
+	Patch "BRGRBR03", 0, 0
+}
+
+Texture "BRGRBR04", 128, 128
+{
+	Patch "BRGRBR04", 0, 0
+}
+
+Texture "BRGRBR06", 128, 128
+{
+	Patch "BRGRBR06", 0, 0
+}
+
+Texture "BRGRBR12", 128, 128
+{
+	Patch "BRGRBR12", 0, 0
+}
+
+Texture "BRGRBR16", 128, 128
+{
+	Patch "BRGRBR16", 0, 0
+}
+
+Texture "BRGRBR18", 128, 128
+{
+	Patch "BRGRBR18", 0, 0
+}
+
+Texture "BRGRBR19", 128, 128
+{
+	Patch "BRGRBR19", 0, 0
+}
+
+Texture "BRGRBR22", 128, 128
+{
+	Patch "BRGRBR22", 0, 0
+}
+
+Texture "BRGRG203", 128, 128
+{
+	Patch "BRGRG203", 0, 0
+}
+
+Texture "BRGRG204", 128, 128
+{
+	Patch "BRGRG204", 0, 0
+}
+
+Texture "BRGRG206", 128, 128
+{
+	Patch "BRGRG206", 0, 0
+}
+
+Texture "BRGRG212", 128, 128
+{
+	Patch "BRGRG212", 0, 0
+}
+
+Texture "BRGRG216", 128, 128
+{
+	Patch "BRGRG216", 0, 0
+}
+
+Texture "BRGRG218", 128, 128
+{
+	Patch "BRGRG218", 0, 0
+}
+
+Texture "BRGRG219", 128, 128
+{
+	Patch "BRGRG219", 0, 0
+}
+
+Texture "BRGRG222", 128, 128
+{
+	Patch "BRGRG222", 0, 0
+}
+
+Texture "BRGRGN03", 128, 128
+{
+	Patch "BRGRGN03", 0, 0
+}
+
+Texture "BRGRGN04", 128, 128
+{
+	Patch "BRGRGN04", 0, 0
+}
+
+Texture "BRGRGN06", 128, 128
+{
+	Patch "BRGRGN06", 0, 0
+}
+
+Texture "BRGRGN12", 128, 128
+{
+	Patch "BRGRGN12", 0, 0
+}
+
+Texture "BRGRGN16", 128, 128
+{
+	Patch "BRGRGN16", 0, 0
+}
+
+Texture "BRGRGN18", 128, 128
+{
+	Patch "BRGRGN18", 0, 0
+}
+
+Texture "BRGRGN19", 128, 128
+{
+	Patch "BRGRGN19", 0, 0
+}
+
+Texture "BRGRGN22", 128, 128
+{
+	Patch "BRGRGN22", 0, 0
+}
+
+Texture "BRGRGY03", 128, 128
+{
+	Patch "BRGRGY03", 0, 0
+}
+
+Texture "BRGRGY04", 128, 128
+{
+	Patch "BRGRGY04", 0, 0
+}
+
+Texture "BRGRGY06", 128, 128
+{
+	Patch "BRGRGY06", 0, 0
+}
+
+Texture "BRGRGY12", 128, 128
+{
+	Patch "BRGRGY12", 0, 0
+}
+
+Texture "BRGRGY16", 128, 128
+{
+	Patch "BRGRGY16", 0, 0
+}
+
+Texture "BRGRGY18", 128, 128
+{
+	Patch "BRGRGY18", 0, 0
+}
+
+Texture "BRGRGY19", 128, 128
+{
+	Patch "BRGRGY19", 0, 0
+}
+
+Texture "BRGRGY22", 128, 128
+{
+	Patch "BRGRGY22", 0, 0
+}
+
+Texture "BRGRBR02", 128, 128
+{
+	Patch "BRGRBR02", 0, 0
+}
+
+Texture "BRGRG202", 128, 128
+{
+	Patch "BRGRG202", 0, 0
+}
+
+Texture "BRGRGN02", 128, 128
+{
+	Patch "BRGRGN02", 0, 0
+}
+
+Texture "BRGRGY02", 128, 128
+{
+	Patch "BRGRGY02", 0, 0
+}
+
+Texture "BSTONEQ1", 64, 128
+{
+	Patch "BSTONEQ1", 0, 0
+}
+
+Texture "BSTONEQ2", 64, 128
+{
+	Patch "BSTONEQ2", 0, 0
+}
+
+Texture "BSTONEQ3", 64, 128
+{
+	Patch "BSTONEQ3", 0, 0
+}
+
+Texture "BSTONEQ4", 64, 128
+{
+	Patch "BSTONEQ4", 0, 0
+}
+
+Texture "BSTONER1", 64, 128
+{
+	Patch "BSTONER1", 0, 0
+}
+
+Texture "BSTONK1", 64, 128
+{
+	Patch "BSTONK1", 0, 0
+}
+
+Texture "BSTONK2", 64, 128
+{
+	Patch "BSTONK2", 0, 0
+}
+
+Texture "BSTONK3", 64, 128
+{
+	Patch "BSTONK3", 0, 0
+}
+
+Texture "W106_1", 256, 128
+{
+	Patch "W106_1", 0, 0
+}
+
+Texture "W107_1", 256, 128
+{
+	Patch "W107_1", 0, 0
+}
+
+Texture "N_CGRY02", 64, 64
+{
+	Patch "N_CGRY02", 0, 0
+}
+
+Texture "N_CGRN01", 64, 64
+{
+	Patch "N_CGRN01", 0, 0
+}
+
+Texture "N_CGRN02", 64, 64
+{
+	Patch "N_CGRN02", 0, 0
+}
+
+Texture "N_CGRY01", 64, 64
+{
+	Patch "N_CGRY01", 0, 0
+}
+
+Texture "N_CORA02", 64, 64
+{
+	Patch "N_CORA02", 0, 0
+}
+
+Texture "N_CORA01", 64, 64
+{
+	Patch "N_CORA01", 0, 0
+}
+
+Texture "N_CRED01", 64, 64
+{
+	Patch "N_CRED01", 0, 0
+}
+
+Texture "N_CRED02", 64, 64
+{
+	Patch "N_CRED02", 0, 0
+}
+
+Texture "N_CYEL02", 64, 64
+{
+	Patch "N_CYEL02", 0, 0
+}
+
+Texture "N_CYEL01", 64, 64
+{
+	Patch "N_CYEL01", 0, 0
+}
+
+Texture "W113_1", 128, 128
+{
+	Patch "W113_1", 0, 0
+}
+
+Texture "W113_2", 32, 128
+{
+	Patch "W113_2", 0, 0
+}
+
+Texture "W113_3", 32, 128
+{
+	Patch "W113_3", 0, 0
+}
+
+Texture "W109_1", 128, 128
+{
+	Patch "W109_1", 0, 0
+}
+
+Texture "W109_2", 128, 128
+{
+	Patch "W109_2", 0, 0
+}
+
+Texture "W110_1", 256, 128
+{
+	Patch "W110_1", 0, 0
+}
+
+Texture "WFALL1", 64, 128
+{
+	Patch "WFALL1", 0, 0
+}
+
+Texture "WFALL2", 64, 128
+{
+	Patch "WFALL2", 0, 0
+}
+
+Texture "WFALL3", 64, 128
+{
+	Patch "WFALL3", 0, 0
+}
+
+Texture "WFALL4", 64, 128
+{
+	Patch "WFALL4", 0, 0
+}
+
+Texture "BIGDOORC", 256, 128
+{
+	Patch "BIGDOORC", 0, 0
+}
+
+Texture "SPCDOORE", 64, 128
+{
+	Patch "SPCDOORE", 0, 0
+}
+
+Texture "SPCDOORF", 64, 128
+{
+	Patch "SPCDOORF", 0, 0
+}
+
+Texture "SPCDOORG", 64, 128
+{
+	Patch "SPCDOORG", 0, 0
+}
+
+Texture "FFIELDR1", 128, 128
+{
+	Patch "FFIELDR1", 0, 0
+}
+
+Texture "FFIELDR2", 128, 128
+{
+	Patch "FFIELDR2", 0, 0
+}
+
+Texture "FFIELDR3", 128, 128
+{
+	Patch "FFIELDR3", 0, 0
+}
+
+Texture "FFIELDR4", 128, 128
+{
+	Patch "FFIELDR4", 0, 0
+}
+
+Texture "FFIELDR5", 128, 128
+{
+	Patch "FFIELDR5", 0, 0
+}
+
+Texture "FFIELDR6", 128, 128
+{
+	Patch "FFIELDR6", 0, 0
+}
+
+Texture "FFIELDR7", 128, 128
+{
+	Patch "FFIELDR7", 0, 0
+}
+
+Texture "FFIELDR8", 128, 128
+{
+	Patch "FFIELDR8", 0, 0
+}
+
+Texture "FFIELDR9", 128, 128
+{
+	Patch "FFIELDR9", 0, 0
+}
+
+Texture "FFIELDRA", 128, 128
+{
+	Patch "FFIELDRA", 0, 0
+}
+
+Texture "FFIELDG1", 128, 128
+{
+	Patch "FFIELDG1", 0, 0
+}
+
+Texture "FFIELDG2", 128, 128
+{
+	Patch "FFIELDG2", 0, 0
+}
+
+Texture "FFIELDG3", 128, 128
+{
+	Patch "FFIELDG3", 0, 0
+}
+
+Texture "FFIELDG4", 128, 128
+{
+	Patch "FFIELDG4", 0, 0
+}
+
+Texture "FFIELDG5", 128, 128
+{
+	Patch "FFIELDG5", 0, 0
+}
+
+Texture "FFIELDG6", 128, 128
+{
+	Patch "FFIELDG6", 0, 0
+}
+
+Texture "FFIELDG7", 128, 128
+{
+	Patch "FFIELDG7", 0, 0
+}
+
+Texture "FFIELDG8", 128, 128
+{
+	Patch "FFIELDG8", 0, 0
+}
+
+Texture "FFIELDG9", 128, 128
+{
+	Patch "FFIELDG9", 0, 0
+}
+
+Texture "FFIELDGA", 128, 128
+{
+	Patch "FFIELDGA", 0, 0
+}
+
+Texture "FFIELDR", 16, 128
+{
+	Patch "FFIELDR", 0, 0
+}
+
+Texture "FFIELDG", 16, 128
+{
+	Patch "FFIELDG", 0, 0
+}
+
+Texture "MIDBARS4", 128, 64
+{
+	Patch "MIDBARS4", 0, 0
+}
+
+Texture "MIDFENC1", 128, 72
+{
+	Patch "MIDFENC1", 0, 0
+}
+
+Texture "MIDFENC2", 128, 128
+{
+	Patch "MIDFENC2", 0, 0
+}
+
+Texture "PANBOOK2", 128, 128
+{
+	Patch "PANBOOK2", 0, 0
+}
+
+Texture "SW1JIMDN", 128, 64
+{
+	Patch "SW1JIMDN", 0, 0
+}
+
+Texture "SW2JIMDN", 128, 64
+{
+	Patch "SW2JIMDN", 0, 0
+}
+
+Texture "DNACSSW1", 64, 32
+{
+	Patch "DNACSSW1", 0, 0
+}
+
+Texture "DNACSSW2", 64, 32
+{
+	Patch "DNACSSW2", 0, 0
+}
+
+Texture "DNFRNKN1", 32, 32
+{
+	Patch "DNFRNKN1", 0, 0
+}
+
+Texture "DNFRNKN2", 32, 32
+{
+	Patch "DNFRNKN2", 0, 0
+}
+
+Texture "SUPP4A", 8, 128
+{
+	Patch "SUPP4A", 0, 0
+}
+
+Texture "PCWINL", 64, 128
+{
+	Patch "PCWINL", 0, 0
+}
+
+// End of texture definitions

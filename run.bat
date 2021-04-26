@@ -1,0 +1,1 @@
+gzdoom -iwad Doom2.wad -file pk3/
