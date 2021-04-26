@@ -5,3 +5,6 @@ Aca hay una lista de ideas para implementar en el WAD:
 
 idea: La UAC esta haciendo experimento para controlar demonios. Asi que tambien debes luchar contra estos.
 idea: Podes liberar otros demonios que lucharan a tu favor.
+idea: laseres hechos con polyobjects hechos con lineas de dos lados (transparencia aditiva)
+idea: laseres hechos con pisos 3D (transparencia aditiva)
+idea: plataformas hechas con un piso arriba, y un polyobject abajo. Los portales de sector me pueden servir.
