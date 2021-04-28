@@ -21,7 +21,7 @@ class RandomExperimentalWeapon : Health{
 	}
 	states{
 		Spawn:
-			TNT1 A 0 A_Jump(255,"Sprite1","Sprite2","Sprite3","Sprite4","Sprite5");
+			TNT1 A 0 A_Jump(255,"Sprite1","Sprite2","Sprite3","Sprite4","Sprite5","Sprite6");
 			loop;
 			
 		Sprite1:
@@ -43,8 +43,47 @@ class RandomExperimentalWeapon : Health{
 		Sprite5:
 			LSCN E -1;
 			stop;
+			
+		Sprite6:
+			BFUG A -1;
+			stop;
 	}
 }
+
+//Por una cuestion de rendimiento, este es un tipo que desaparece a los 10 segundos.
+//Lo tuve que escribir todo de vuelta porque Ultimate Doom Builder es un pelotudo.
+class RandomExperimentalWeapon_Disappears : RandomExperimentalWeapon{
+	states{
+		Spawn:
+			TNT1 A 0 A_Jump(255,"Sprite1","Sprite2","Sprite3","Sprite4","Sprite5","Sprite6");
+			loop;
+			
+		Sprite1:
+			DCAN A 525;
+			TNT1 A 0 ResolveState("Null");
+			
+		Sprite2:
+			PLSP A 525;
+			TNT1 A 0 ResolveState("Null");
+			
+		Sprite3:
+			KSWP A 525;
+			TNT1 A 0 ResolveState("Null");
+			
+		Sprite4:
+			CHAN X 525;
+			TNT1 A 0 ResolveState("Null");
+			
+		Sprite5:
+			LSCN E 525;
+			TNT1 A 0 ResolveState("Null");
+			
+		Sprite6:
+			BFUG A 525;
+			TNT1 A 0 ResolveState("Null");
+	}
+}
+
 
 Class BrokenLamp : Actor{
 	default{
@@ -292,17 +331,17 @@ Class BarrelFlames : Actor{
 	States{
 		Spawn:
 			OILS A 0 bright;
-			OILS A 4 bright A_PlaySoundEx ("BarrelFire/Loop", "SoundSlot5", 1);
-			OILS A 0 bright A_PlaySoundEx ("BarrelFire/Start", "SoundSlot6");
+			OILS A 4 bright A_StartSound("BarrelFire/Loop", 5, CHANF_LOOP);
+			OILS A 0 bright A_StartSound("BarrelFire/Start", 6);
 			OILS BC 4 bright;
 		FireLoop:
 			OILF AB 4 bright;
-			OILF C 4 bright A_Explode (5, 40);
+			OILF C 4 bright A_Explode(5, 40);
 			OILF C 0 bright A_CountDown;
 			Loop;
 		Death:
 			OILS CB 4 bright;
-			OILS A 4 bright A_StopSoundEx ("SoundSlot5");
+			OILS A 4 bright A_StopSound(5);
 			Stop;
 	}
 }
@@ -495,3 +534,68 @@ Class GTechPillarLightSB : Actor{
 	}
 }
 
+//////////////////////////// AnimatedUACLogo ////////////////////////////
+
+//DECAL ANIMATOR
+class RedUACPainter : Actor{
+	int Offseted;
+	default{
+		Radius 2;
+		Height 2;
+		+NOINTERACTION;
+		+NOGRAVITY;
+	}
+	States{
+		Spawn:
+		TNT1 A 0;
+		//fall through
+		Paint:
+		TNT1 A 16 A_SpawnItemEx ("RedUPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+		TNT1 A 16 A_SpawnItemEx ("RedAPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+		TNT1 A 16 A_SpawnItemEx ("RedCPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+		TNT1 A 32;
+		loop;
+	}
+}
+
+class GreenUACPainter : RedUACPainter{
+  States{
+  Spawn:
+	TNT1 A 0;
+	//fall through
+  Paint:
+    TNT1 A 16 A_SpawnItemEx ("GreenUPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+    TNT1 A 16 A_SpawnItemEx ("GreenAPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+    TNT1 A 16 A_SpawnItemEx ("GreenCPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+    TNT1 A 32;
+    loop;
+  }
+}
+
+class BlueUACPainter : RedUACPainter{
+  States{
+  Spawn:
+	TNT1 A 0;
+	//fall through
+  Paint:
+    TNT1 A 16 A_SpawnItemEx ("BlueUPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+    TNT1 A 16 A_SpawnItemEx ("BlueAPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+    TNT1 A 16 A_SpawnItemEx ("BlueCPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+    TNT1 A 32;
+    loop;
+  }
+}
+
+class YellowUACPainter : RedUACPainter{
+  States{
+  Spawn:
+	TNT1 A 0;
+	//fall through
+  Paint:
+    TNT1 A 16 A_SpawnItemEx ("YellowUPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+    TNT1 A 16 A_SpawnItemEx ("YellowAPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+    TNT1 A 16 A_SpawnItemEx ("YellowCPainter", 0, 0, 0, 100, 0, 0, 0, 0, 0);
+    TNT1 A 32;
+    loop;
+  }
+}

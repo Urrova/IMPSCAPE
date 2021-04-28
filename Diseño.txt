@@ -62,14 +62,8 @@ MAP04: Computer Station (no se me ocurrio un nombre mejor)
 	Mecanicas nuevas:
 		- Te metes dentro de computadoras para activar cosas
 		- Un campo de fuerza que lo atravezas y da vuelta la gravedad
-		
-MAP05: The Bridge (TODO EN INGLOES XD)
-	Empezas en un edificio y salis a un puente. Aca hay marines, tanques, mas demonios grises. A la mitad viene un
-	avion y bombardea el puente partiendolo a la mitad. Desarrollar mas.
-		- El avion estaria muy bueno que sea un modelo 3D. Tengo que ver alguno que me guste y ver como poner el modelo.
-		- En un lugar tambien puedo poner tanques
 	
-MAP06: Installament exteriors
+MAP05: Installament exteriors
 	Musica: Robotic Invasion
 	Parte 1:
 	Mapa estilo ciudad en las afueras de la instalacion de la UAC. Al final se activa un campo de fuerza
@@ -78,7 +72,7 @@ MAP06: Installament exteriors
 	Parte 2:
 	Vas al sistema de teletransportadores y te teletransportas a la dimension de la UAC. Y empieza MAP08.
 	
-MAP07: The supercomputer
+MAP06: The supercomputer
 	Musica: Mirrored Mars
 	Este es un mapa de computadora grande (tipo te metes en una computadora que es todo el mapa).
 	Al final te enfrentas a un gran antivirus. Desarrollar mas.
@@ -86,14 +80,14 @@ MAP07: The supercomputer
 	El Sistema de teletransportadores tiene un sistema de computadoras alterno, por si la supercomputadora se daña
 	o alguien la sabotea, y se pueda usar como via de escape.
 
-MAP08: UAC Dimension
+MAP07: UAC Dimension
+	Musica: Agujero Gusano
 	Una dimension construida por la UAC, lleno de portales a otros lugares. Es la segunda dimension hecha por la
 	UAC, luego de que la primera resultara fallida. Esta primera es MAP09, el nivel secreto.
 	
-	Donde te tenes que teletransportar al infierno. Al final obviamente el jefe final. No danmaku, pero si dificil.
-	No tengo idea como va a ser, seguramente algun mech o algo asi.
+	Donde te tenes que teletransportar al infierno.
 	
-	MAP08 va a estar lleno de portales estilo prey, hasta en polyobjects, tipo uno que gira para cambiar 
+	MAP07 va a estar lleno de portales estilo prey, hasta en polyobjects, tipo uno que gira para cambiar 
 	un portal por otro portal.
 	
 	Como va a estar lleno de portales, la ambientacion puede cambiar bastante. No mas solamente tema base,
@@ -105,13 +99,12 @@ MAP08: UAC Dimension
 	- La luna
 	- Gensokyo :v
 	- La dimension Livernac (la de DIMWEIRD.pk3)
+	- Las ruinas de FURDEMON.
 	
-	La escena final tiene un portal al infierno. Ahi se enfrenta con el jefe
-	
-MAP09: Failed Dimension
-	La primera dimension construida por la UAC, ahora fallida y corrupta.
-	Es el nivel secreto del pk3
-	
+MAP08: HUB
+	El mapa final. Inicia en un ascensor que sube, y luego llega a la arena en un espacio parecido a un tubo con portales.
+	Llega el jefe final y la arena se empieza a mover por el tubo mostrando todos los portales.
+
 	
 IDEAS:
 

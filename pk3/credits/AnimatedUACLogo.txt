@@ -1,0 +1,6 @@
+Type: Animated UAC Logo
+Summon: [red/green/blue/yellow]UACPainter
+
+Decorate: Captain Toenail
+Sprites: Doom Font - http://www.dafont.com/doom.font
+Inspiration: Quake3 wall animations

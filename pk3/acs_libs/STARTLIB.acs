@@ -1,8 +1,8 @@
 #library "STARTLIB"
 #include "zcommon.acs"
 
-int ENTERMSG_COUNT = 7;
-int ENTERMSG_MAPS[7] = {2,3,4,5,6,7,8};
+int ENTERMSG_COUNT = 6;
+int ENTERMSG_MAPS[7] = {2,3,4,5,6,7};
 
 //Script cuando empieza cualquier mapa.
 script "Init" ENTER{
@@ -50,4 +50,11 @@ script "EnterMSG" (void){
 		
 	hudmessage(s:"Entering:";HUDMSG_FADEINOUT,18423,CR_TAN,0.5,0.25,2.0,1.0,1.0,1.0);
 	hudmessage(n:PRINTNAME_LEVELNAME;HUDMSG_FADEINOUT,18424,CR_TAN,0.5,0.3,2.0,1.0,1.0,1.0);
+}
+
+script "DeathController" DEATH{
+	for (int i = GetActorRoll(1234);i < 0.20; i+=0.01){
+		SetActorRoll(1234,i);
+		delay(1);
+	}
 }

@@ -3,19 +3,31 @@ compy1 "sounds/computer/Compy1.flac"
 compy2 "sounds/computer/Compy2.flac"
 compy3 "sounds/computer/Compy3.flac"
 compy4 "sounds/computer/Compy4.flac"
-compy5 "sounds/computer/DroneComputer.mp3"
-compy6 "sounds/computer/COMPUTE3"
+compy5 "sounds/computer/DRONE"
+compy6 "sounds/computer/DRONE"
+compy7 "sounds/computer/Compy5.wav"
+compy8 "sounds/computer/Compy6.wav"
+
+machine1 "sounds/machine/COMPUTE3"
 
 //Puertas
 door1_start	"sounds/doors/d1_start.wav"
 door1_mid	"sounds/doors/d1_mid.wav"
 door1_end	"sounds/doors/d1_end.wav"
+
 door2_start	"sounds/doors/d2_start.wav"
 door2_mid	"sounds/doors/d2_mid.wav"
 door2_end	"sounds/doors/d2_end.wav"
+
 door3_start	"sounds/doors/d3_start.wav"
 door3_mid	"sounds/doors/d3_mid.wav"
 door3_end	"sounds/doors/d3_end.wav"
+
+//Buzzes de luces.
+LiteBuzz1 "sounds/LiteBuzz/LITEBZ4.wav"
+LiteBuzz2 "sounds/LiteBuzz/LITEBZ5.wav"
+LiteBuzz3 "sounds/LiteBuzz/LITEBZHI.wav"
+LiteBuzz4 "sounds/LiteBuzz/LITEBZLO.wav"
 
 //Marines
 Marine/SawSite "sounds/ALLYSAWS"
@@ -23,6 +35,18 @@ Marine/Active "sounds/ALLYACTV"
 Marine/See1	"sounds/ALLYSITE"
 Marine/See2	"sounds/ALLYACTV"
 Marine/See3	"sounds/ALYBRDY"
+
+//Maquinas
+machine1 "sounds/machine/COMPUTE3"
+machine2 "sounds/machine/BIGMACHN.wav"
+
+//Viento
+wind1 "sounds/ambient/AIRFLOW1.wav"
+wind2 "sounds/ambient/LOWFLOW.wav"
+
+//Alarmas
+Alarm1 "sounds/ALARM1"
+Alarm2 "sounds/ALARM2"
 
 //UAC Cyberdemon
 UACCyber/Hoof "sounds/UACCyber/DSANHOOF"
@@ -44,11 +68,26 @@ $ambient 1 compy2 point continuous 1.0
 $ambient 2 compy3 point continuous 1.0
 $ambient 3 compy4 point continuous 1.0
 $ambient 4 compy5 point continuous 1.0
-$ambient 5 compy6 point continuous 1.0
+$ambient 6 compy6 point continuous 1.0
+$ambient 7 compy7 point continuous 1.0
+$ambient 8 compy8 point continuous 1.0
+
+$ambient 9 LiteBuzz1 point continuous 1.0
+$ambient 10 LiteBuzz2 point continuous 1.0
+$ambient 11 LiteBuzz3 point continuous 1.0
+$ambient 12 LiteBuzz4 point continuous 1.0
+
+$ambient 5 machine1 point continuous 1.0
+
+$ambient 13 Alarm2 point continuous 0.6
 
 //Warps
 portalwarp "sounds/PORTALWARP"
 
 
 ///////////////SONIDOS MENU////////////////////
-menu/choose "sounds/menu/SELECTOK.wav"
+menu/choose "sounds/menu/MENU_SELECT"
+menu/backup "sounds/menu/MENU_BACK"
+menu/cursor "sounds/menu/MENU_CURSOR"
+menu/activate "sounds/menu/MENU_OPEN"
+menu/clear "sounds/menu/MENU_CLOSE"

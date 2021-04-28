@@ -4,4 +4,6 @@ GameInfo{
    DimAmount = 0.5
    BlurAmount = 0.0
    AddEventHandlers = "ShaderHandler"
+   TitleTime = 2147483647 //INFINITE
+   TitleMusic = "/music/D_INTRO.ogg"
 }

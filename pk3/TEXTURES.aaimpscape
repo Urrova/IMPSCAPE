@@ -254,4 +254,9 @@ Texture "OCOMPA38", 256, 128
 	Patch "OL0_03_7", 0, 0
 }
 
+Texture "CAMTEX1", 64, 64{}
+Texture "CAMTEX2", 64, 64{}
+Texture "CAMTEX3", 64, 64{}
+Texture "CAMTEX4", 64, 64{}
+
 // End of texture definitions

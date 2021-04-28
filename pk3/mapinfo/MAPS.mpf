@@ -1,5 +1,5 @@
 defaultmap{
-	sky1 = "ARES"
+	sky1 = "SKYESSL1"
 	NoJump
 	NoCrouch
 	AllowFreelook
@@ -29,7 +29,7 @@ map MAP02 "Demon control lab #2"{
 }
 
 map MAP03 "Experimental Weapon Armory"{
-	music = "D_COUNTD"
+	music = "D_IGNIS"
 	next = "MAP04"
 	LevelNum = 3
 }
@@ -41,25 +41,19 @@ map MAP04 "Abandoned Computer Station"{
 	Sky1 = "TEKWALL4"
 }
 
-map MAP05 "The Bridge"{
-	music = "D_DOOM"
-	next = "MAP06"
+map MAP05 "The Installament Exteriors"{
+	music = "D_TKWALL"
+	next = "MAP07"
 	LevelNum = 5
 }
 
-map MAP06 "The Installament Exteriors"{
-	music = "D_TKWALL"
-	next = "MAP07"
+map MAP06 "The Supercomputer"{
+	music = "D_MARS"
+	next = "MAP08"
 	LevelNum = 6
 }
 
-map MAP07 "The Supercomputer"{
-	music = "D_MARS"
-	next = "MAP08"
+map MAP07 "The teleporters system"{
+	music = "D_GUSANO"
 	LevelNum = 7
-}
-
-map MAP08 "The teleporters system"{
-	music = "D_DDTBLU"
-	LevelNum = 8
 }

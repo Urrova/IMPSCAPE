@@ -1,0 +1,6 @@
+Place the UACPainter actors on your map. Make sure they are facing the correct wall surface,
+and make sure they are placed quite close, 8 units should be suffice. Give the UAC Painter a
+zheight to adjust the vertical point at which the decal image is 'painted' on the wall.
+
+This only contains an animated UAC logo, but I encourage you to invent your own wall animations
+using decals.

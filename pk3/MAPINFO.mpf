@@ -86,7 +86,15 @@ DoomEdNums
   8281 = GTechPillarSB
   8282 = GTechPillarLightB
   8283 = GTechPillarLightSB
+  8284 = SteamSpawner
+  8285 = RedUACPainter
+  8286 = GreenUACPainter
+  8287 = YellowUACPainter
+  8288 = BlueUACPainter
   //Torretas
   8274 = RocketTurret
   8275 = SentryGun
+  //Friendlies
+  16001 = Cientist1
+  16002 = Cientist1_Patrol
 }

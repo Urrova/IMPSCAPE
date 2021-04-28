@@ -51,3 +51,9 @@ warp2 flat FWATER1
 warp2 flat FWATER2
 warp2 flat FWATER3
 warp2 flat FWATER4
+
+/////Texturas de camara/////
+cameratexture CAMTEX1 256 256 fit 64 64
+cameratexture CAMTEX2 256 256 fit 64 64
+cameratexture CAMTEX3 256 256 fit 64 64
+cameratexture CAMTEX4 256 256 fit 64 64

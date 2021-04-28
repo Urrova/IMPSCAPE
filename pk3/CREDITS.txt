@@ -29,7 +29,7 @@ OilDrum.awd by Captain Toenail
 PipePack.wad
 UACHolograms.wad
 FlyingImp.wad
-Annihilator.wad //For UAC Cyberdemon
+Annihilator.wad //For UAC Cyberdemons
 
 //These only i picked the sprites for experimental weapon decoration.
 //De estos solo agarre sprites de pickup para las armas experimentales de decoracion
@@ -41,3 +41,10 @@ LaserCannon.wad
 
 === Sonidos | Sounds ===
 DSPLASMA from Doom 64 / PSX Doom
+
+
+
+
+
+im so unorganized, for the next mod i have to separate texture groups and not copy/paste textures on
+the textures folder.

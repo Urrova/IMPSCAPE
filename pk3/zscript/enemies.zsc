@@ -37,7 +37,7 @@ class ShotgunMarineEnemy : MarineShotgun{
 		Pain:
 			ALY5 G 4;
 			ALY5 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			ALY5 H 10;
 			ALY5 I 10 A_Scream;
@@ -96,7 +96,7 @@ class PistolMarineEnemy : MarinePistol{
 		Pain:
 			ALY2 G 4;
 			ALY2 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			ALY2 H 10;
 			ALY2 I 10 A_Scream;
@@ -156,7 +156,7 @@ class FistMarineEnemy : MarineFist{
 		Pain:
 			ALY1 G 4;
 			ALY1 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			ALY1 H 10;
 			ALY1 I 10 A_Scream;
@@ -217,7 +217,7 @@ class ChaingunMarineEnemy : MarineChaingun{
 		Pain:
 			ALY4 G 4;
 			ALY4 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			ALY4 H 10;
 			ALY4 I 10 A_Scream;
@@ -275,7 +275,7 @@ class RocketMarineEnemy : MarineRocket{
 		Pain:
 			ALY9 G 4;
 			ALY9 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			ALY9 H 10;
 			ALY9 I 10 A_Scream;
@@ -336,7 +336,7 @@ class PlasmaMarineEnemy : MarinePlasma{
 		Pain:
 			ALY8 G 4;
 			ALY8 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			ALY8 H 10;
 			ALY8 I 10 A_Scream;
@@ -399,7 +399,7 @@ class SubPlasmaMarineEnemy : MarinePlasma{
 		Pain:
 			ALY8 G 4;
 			ALY8 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			ALY8 H 10;
 			ALY8 I 10 A_Scream;
@@ -466,7 +466,7 @@ class PlasmaShotgunMarineEnemy : MarinePlasma{
 		Pain:
 			ALY8 G 4;
 			ALY8 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			ALY8 H 10;
 			ALY8 I 10 A_Scream;
@@ -527,7 +527,7 @@ class BFGMarineEnemy : MarineBFG{
 		Pain:
 			AL10 G 4;
 			AL10 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			AL10 H 10;
 			AL10 I 10 A_Scream;
@@ -586,7 +586,7 @@ class ChainsawMarineEnemy : MarineChainsaw{
 		Pain:
 			ALY7 G 4;
 			ALY7 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			ALY7 H 10;
 			ALY7 I 10 A_Scream;
@@ -642,7 +642,7 @@ class SShotgunMarineEnemy : MarineSSG{
 		Pain:
 			AL11 G 4;
 			AL11 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			AL11 H 10;
 			AL11 I 10 A_Scream;
@@ -699,7 +699,7 @@ class RailgunMarineEnemy : MarineRailgun{
 		Pain:
 			AL12 G 4;
 			AL12 G 4 A_Pain;
-			Goto Idle;
+			Goto See;
 		Death:
 			AL12 H 10;
 			AL12 I 10 A_Scream;
@@ -838,6 +838,21 @@ class ControlledPainElemental : PainElemental{
 	default{
 		Translation "Ice";
 		bloodcolor "00 FF 00";
+	}
+	states{
+		Missile:
+			PAIN D 5 A_FaceTarget;
+			PAIN E 5 A_FaceTarget;
+			PAIN F 5 BRIGHT A_FaceTarget;
+			PAIN F 0 BRIGHT A_PainAttack("ControlledLostSoul");
+			Goto See;
+		Death:
+			PAIN H 8 BRIGHT;
+			PAIN I 8 BRIGHT A_Scream;
+			PAIN JK 8 BRIGHT;
+			PAIN L 8 BRIGHT A_PainDie("ControlledLostSoul");
+			PAIN M 8 BRIGHT;
+			Stop;
 	}
 }
 
@@ -1128,7 +1143,7 @@ Class SentryGun : Actor{
 			loop;
 		See:
 			SENT AAAAAAAAAAAAAAAA 4 A_Chase;
-			SENT A 0 A_PlaySound ("Sentry/Active");
+			SENT A 0 A_StartSound("Sentry/Active");
 			loop;
 		Missile:
 			SENT A 16 A_FaceTarget;
@@ -1136,9 +1151,9 @@ Class SentryGun : Actor{
 			SENT A 2 A_CposRefire;
 			goto Missile+1;
 		Death:
-			SENT C 1 A_PlaySoundEx ("Sentry/Death", "SoundSlot5");
-			SENT C 0 A_PlaySoundEx ("weapons/rocklx", "SoundSlot6");
-			SENT C 0 A_SpawnItem ("SentryBoom", 0, 48);
+			SENT C 1 A_StartSound("Sentry/Death", 5);
+			SENT C 0 A_StartSound("weapons/rocklx", 6);
+			SENT C 0 A_SpawnItem("SentryBoom", 0, 48);
 			SENT C 512;
 		FadeOut:
 			SENT C 2 A_FadeOut (0.1);

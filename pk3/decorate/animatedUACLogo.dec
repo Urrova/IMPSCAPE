@@ -1,0 +1,81 @@
+//RED
+actor RedUPainter
+{
+  Radius 2
+  Height 2
+  Damage 0
+  Speed 100
+  Decal RedU
+  Projectile
+  //-ACTIVATEIMPACT
+  //-ACTIVATECROSS
+  +RIPPER
+  +BLOODLESSIMPACT
+  States
+  {
+  Spawn:
+    TNT1 A 1
+    loop
+  Death:
+    TNT1 A 1
+    stop
+  }
+}
+
+actor RedAPainter : RedUPainter
+{
+  Decal RedA
+}
+
+actor RedCPainter : RedUPainter
+{
+  Decal RedC
+}
+
+//GREEN
+actor GreenUPainter : RedUPainter
+{
+  Decal GreenU
+}
+
+actor GreenAPainter : RedUPainter
+{
+  Decal GreenA
+}
+
+actor GreenCPainter : RedUPainter
+{
+  Decal GreenC
+}
+
+//BLUE
+actor BlueUPainter : RedUPainter
+{
+  Decal BlueU
+}
+
+actor BlueAPainter : RedUPainter
+{
+  Decal BlueA
+}
+
+actor BlueCPainter : RedUPainter
+{
+  Decal BlueC
+}
+
+//YELLOW
+actor YellowUPainter : RedUPainter
+{
+  Decal YellowU
+}
+
+actor YellowAPainter : RedUPainter
+{
+  Decal YellowA
+}
+
+actor YellowCPainter : RedUPainter
+{
+  Decal YellowC
+}

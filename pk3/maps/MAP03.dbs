@@ -26,8 +26,8 @@ maps
 				notfortesting = 0;
 			}
 		}
-		viewpositiony = 2447.766f;
-		viewpositionx = 4754.239f;
+		viewpositiony = 2038.697f;
+		viewpositionx = 3025.938f;
 		customceilheight = 128;
 		
 		plugins
@@ -55,14 +55,14 @@ maps
 					prefab1
 					{
 						name = "[Previous]";
-						numberofsectors = 4;
+						numberofsectors = 1;
 						outervertexmultiplier = 1;
 						innervertexmultiplier = 1;
 						stairtype = 0;
-						sectordepth = 8;
+						sectordepth = 16;
 						spacing = 0;
-						frontside = true;
-						singlesectors = false;
+						frontside = false;
+						singlesectors = true;
 						distinctsectors = false;
 						singledirection = false;
 						distinctbaseheights = true;
@@ -82,7 +82,7 @@ maps
 						applymiddletexture = false;
 						middletexture = "-";
 						applylowertexture = false;
-						lowertexture = "BRGRGY22";
+						lowertexture = "-";
 						lowerunpegged = true;
 					}
 				}
@@ -103,7 +103,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.1378579f;
+		viewscale = 0.2329796f;
 		defaulttoptexture = "STARGR1";
 		overridebottomtexture = false;
 		useresourcesinreadonlymode = false;
@@ -192,8 +192,7 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 4699;
-				firstvisibleline = 174;
+				caretposition = 727;
 				activetab = true;
 			}
 		}
