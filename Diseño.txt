@@ -109,9 +109,17 @@ MAP08: HUB
 IDEAS:
 
 idea: La UAC esta haciendo experimento para controlar demonios. Asi que tambien debes luchar contra estos.
+
 idea: Podes liberar otros demonios que lucharan a tu favor.
+
 idea: laseres hechos con polyobjects hechos con lineas de dos lados (transparencia aditiva)
+
 idea: laseres hechos con pisos 3D (transparencia aditiva)
+
 idea: plataformas hechas con un piso arriba, y un polyobject abajo. Los portales de sector me pueden servir.
+
 idea: puedo poner crushers estilo super mario (thomps), y que se puedan usar como ascensores para llegar a otra parte
 	modelo 3D quiza, son solo hacer un cubo y ponerle texturas nomas xD y me ahorro catorce millones de pisos 3D
+	
+idea: una mecanica de sigilo donde tenes que pasar por partes con camaras que giran intentando que no te vean.
+	y si no giran hay que intentar romperlas. si te ven las camaras se espawnean un monton de archviles.

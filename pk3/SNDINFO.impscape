@@ -48,6 +48,20 @@ wind2 "sounds/ambient/LOWFLOW.wav"
 Alarm1 "sounds/ALARM1"
 Alarm2 "sounds/ALARM2"
 
+//Explosiones
+$alias Explosion1 weapons/rocklx
+$alias Explosion2 RTurret/Explode
+$alias Explosion3 TRocket/Explode
+Explosion4 "sounds/BOMB2"
+Explosion5 "sounds/BOMB3"
+$random RandomExplosionSound{
+	Explosion1
+	Explosion2
+	Explosion3
+	Explosion4
+	Explosion5
+}
+
 //UAC Cyberdemon
 UACCyber/Hoof "sounds/UACCyber/DSANHOOF"
 

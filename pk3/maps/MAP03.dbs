@@ -26,8 +26,8 @@ maps
 				notfortesting = 0;
 			}
 		}
-		viewpositiony = 2038.697f;
-		viewpositionx = 3025.938f;
+		viewpositiony = 4573.207f;
+		viewpositionx = 1521.967f;
 		customceilheight = 128;
 		
 		plugins
@@ -99,11 +99,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 128;
+			gridsize = 32;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.2329796f;
+		viewscale = 0.6654161f;
 		defaulttoptexture = "STARGR1";
 		overridebottomtexture = false;
 		useresourcesinreadonlymode = false;
@@ -171,6 +171,11 @@ maps
 				color_wallbottom = 0;
 				color_floor = 0;
 			}
+			
+			thing
+			{
+				gravity = 1;
+			}
 		}
 		
 		scriptdocuments
@@ -192,7 +197,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 727;
+				caretposition = 4963;
+				firstvisibleline = 191;
 				activetab = true;
 			}
 		}
