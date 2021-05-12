@@ -1,6 +1,7 @@
 class PlasmaShotgunBall : ArachnotronPlasma{
 	default{
 		translation 2;
+		speed 20;
 	}
 	states{
 		Spawn:
@@ -13,7 +14,8 @@ class PlasmaShotgunBall : ArachnotronPlasma{
 
 class impplayerball : doomimpball{
 	default{
-		speed 14;
+		speed 15;
+		damage 4;
 	}
 }
 

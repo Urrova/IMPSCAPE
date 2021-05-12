@@ -26,8 +26,8 @@ maps
 				notfortesting = 0;
 			}
 		}
-		viewpositiony = 4573.207f;
-		viewpositionx = 1521.967f;
+		viewpositiony = 2070.73f;
+		viewpositionx = 2942.628f;
 		customceilheight = 128;
 		
 		plugins
@@ -59,9 +59,9 @@ maps
 						outervertexmultiplier = 1;
 						innervertexmultiplier = 1;
 						stairtype = 0;
-						sectordepth = 16;
+						sectordepth = 12;
 						spacing = 0;
-						frontside = false;
+						frontside = true;
 						singlesectors = true;
 						distinctsectors = false;
 						singledirection = false;
@@ -77,12 +77,12 @@ maps
 						applyceilingtexture = false;
 						ceilingtexture = "";
 						applyuppertexture = false;
-						uppertexture = "-";
+						uppertexture = "flats/SUP532BF";
 						upperunpegged = true;
 						applymiddletexture = false;
 						middletexture = "-";
 						applylowertexture = false;
-						lowertexture = "-";
+						lowertexture = "STEP4";
 						lowerunpegged = true;
 					}
 				}
@@ -94,16 +94,16 @@ maps
 		{
 			backoffsetx = 0;
 			backsource = 0;
-			gridoriginy = 0;
+			gridoriginy = -8576;
 			backscaley = 100;
-			gridrotate = 0;
+			gridrotate = 4.71238898038469;
 			backscalex = 100;
-			gridoriginx = 0;
-			gridsize = 32;
+			gridoriginx = 4032;
+			gridsize = 16;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.6654161f;
+		viewscale = 1.90049f;
 		defaulttoptexture = "STARGR1";
 		overridebottomtexture = false;
 		useresourcesinreadonlymode = false;
@@ -162,6 +162,7 @@ maps
 				soundsequence = 2;
 				lightceiling = 0;
 				lightcolor = 0;
+				lightceilingabsolute = 3;
 				gravity = 1;
 				color_ceiling = 0;
 				color_walltop = 0;
@@ -197,8 +198,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 4963;
-				firstvisibleline = 191;
+				caretposition = 7443;
+				firstvisibleline = 309;
 				activetab = true;
 			}
 		}

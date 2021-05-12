@@ -6,4 +6,5 @@ GameInfo{
    AddEventHandlers = "ShaderHandler"
    TitleTime = 2147483647 //INFINITE
    TitleMusic = "/music/D_INTRO.ogg"
+   IntermissionMusic = "/music/D_TELEPT.ogg"
 }
