@@ -184,3 +184,29 @@ class BaronBall_SuperSuperFast : BaronBall{
 	Translation "112:127=250:254";
 	}
 }
+
+//Barril Explosivo como proyectil
+class ExplosiveBarrelProjectile : Actor{
+	default{
+		Health 20;
+		Radius 10;
+		Height 42;
+		Projectile;
+		-NOGRAVITY;
+		Speed 30;
+		Damage 20;
+		DeathSound "world/barrelx";
+	}
+	states{
+		Spawn:
+			BEXP AB 6 Bright;
+			Loop;
+		Death:
+			BEXP B 5 Bright A_Scream;
+			BEXP C 5 Bright;
+			BEXP D 5 Bright A_Explode;
+			BEXP E 10 Bright;
+			TNT1 A 1050 Bright A_BarrelDestroy;
+			Stop;
+	}
+}

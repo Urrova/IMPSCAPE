@@ -8,8 +8,9 @@ include mapinfo/EPISODES.mpf
 
 //Los DoomEdNums los pongo aca por que si no no me los detecta
 //Ningun editor de mapas :/
-DoomEdNums
-{
+DoomEdNums{
+//Barril
+  2035 = DraggableExplosiveBarrel
 //Items
   11000 = FirePowerUp
   11001 = DarkImpOrb

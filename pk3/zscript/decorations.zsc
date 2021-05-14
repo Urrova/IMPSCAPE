@@ -1,3 +1,63 @@
+//Barril que se puede agarrar y lanzar (da el arma ExplosiveBarrelWeapon)
+class DraggableExplosiveBarrel : SwitchableDecoration{
+	default{
+		Health 20;
+		Radius 10;
+		Height 42;
+		+SOLID;
+		+SHOOTABLE;
+		+NOBLOOD;
+		+ACTIVATEMCROSS;
+		+DONTGIB;
+		+NOICEDEATH;
+		+OLDRADIUSDMG;
+		DeathSound "world/barrelx";
+		Obituary "$OB_BARREL";
+		Activation THINGSPEC_Switch;
+		+USESPECIAL;
+	}
+	states{
+		Spawn:
+			BAR1 AB 6;
+			Loop;
+		Death:
+			BEXP A 5 Bright;
+			BEXP B 5 Bright A_Scream;
+			BEXP C 5 Bright;
+			BEXP D 5 Bright A_Explode;
+			BEXP E 10 Bright;
+			TNT1 A 1050 Bright A_BarrelDestroy;
+			TNT1 A 5 A_Respawn;
+			Wait;
+		Active:
+			TNT1 A 1{
+				if (CheckInventory("ExplosiveBarrelWeapon",1,AAPTR_PLAYER1)){
+					return;
+				}
+				//Le saca al jugador cualquier tipo de brazo de imp que tenga.
+				if (CheckInventory("ImpArm",1,AAPTR_PLAYER1))
+					A_TakeInventory("ImpArm",1,0,AAPTR_PLAYER1);
+					
+				if (CheckInventory("DarkImpArm",1,AAPTR_PLAYER1))
+					A_TakeInventory("DarkImpArm",1,0,AAPTR_PLAYER1);
+					
+				A_GiveInventory("ExplosiveBarrelWeapon",0,AAPTR_PLAYER1);
+				A_BarrelDestroy();
+			}
+			goto Spawn;
+		Inactive:
+			TNT1 A 1{
+				if (CheckInventory("ExplosiveBarrelWeapon",1,AAPTR_PLAYER1)){
+					return;
+				}
+				A_TakeInventory("ImpArm",1,0,AAPTR_PLAYER1);
+				A_GiveInventory("ExplosiveBarrelWeapon",0,AAPTR_PLAYER1);
+				A_BarrelDestroy();
+			}
+			goto Spawn;
+	}
+}
+
 class Chair : Actor{
 	default{
 		+FloorClip;
