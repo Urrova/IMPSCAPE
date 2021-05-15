@@ -26,8 +26,8 @@ maps
 				notfortesting = 0;
 			}
 		}
-		viewpositiony = 2070.73f;
-		viewpositionx = 2942.628f;
+		viewpositiony = -6047.265f;
+		viewpositionx = 2851.94f;
 		customceilheight = 128;
 		
 		plugins
@@ -96,14 +96,14 @@ maps
 			backsource = 0;
 			gridoriginy = -8576;
 			backscaley = 100;
-			gridrotate = 4.71238898038469;
+			gridrotate = 4.71238899230957;
 			backscalex = 100;
 			gridoriginx = 4032;
-			gridsize = 16;
+			gridsize = 4;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 1.90049f;
+		viewscale = 9.173318f;
 		defaulttoptexture = "STARGR1";
 		overridebottomtexture = false;
 		useresourcesinreadonlymode = false;
@@ -198,8 +198,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 7443;
-				firstvisibleline = 309;
+				caretposition = 6991;
+				firstvisibleline = 303;
 				activetab = true;
 			}
 		}
