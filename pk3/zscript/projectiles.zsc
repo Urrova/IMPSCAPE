@@ -210,3 +210,30 @@ class ExplosiveBarrelProjectile : Actor{
 			Stop;
 	}
 }
+
+//Barril Explosivo como proyectil
+class OilDrumProjectile : Actor{
+	default{
+		Health 20;
+		Radius 10;
+		Height 42;
+		Projectile;
+		-NOGRAVITY;
+		Speed 30;
+		Damage 20;
+		DeathSound "world/barrelx";
+	}
+	states{
+		Spawn:
+			OILD A 6 Bright;
+			Loop;
+		Death:
+			OILD B 5 BRIGHT;
+			OILD C 5 BRIGHT A_Explode;
+			OILC CCCCC 0 BRIGHT A_SpawnItemEx("BarrelFlames", random (0, 40), random (0, 40), 0, 0, 0, 0, random (0, 360)) ;
+			OILD D 10 BRIGHT;
+			OILD D 1050 BRIGHT A_BarrelDestroy;
+			OILD D 5 A_Respawn;
+			Wait;
+	}
+}

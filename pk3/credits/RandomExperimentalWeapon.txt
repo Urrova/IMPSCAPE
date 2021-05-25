@@ -1,0 +1,14 @@
+BlackHoleGenerator.wad
+Sprites: NMN, Zero Prophet, Reactor, Kronos, Midway
+
+PlasmaSplitter.wad
+Sprites: Id Software, Skulltag Team
+
+Karasawa.wad
+Sprites: Eriance, Mechadon (Pickup sprite base)
+
+Channeler.wad
+Sprites: JoeyTD, Id Software
+
+LaserCannon.wad
+Sprites: Captain J

@@ -1,5 +1,4 @@
-void main()
-{
+void main(){
     vec2 uv = TexCoord.xy;
     vec4 tex_color;
     tex_color.r = texture(InputTexture, vec2(uv.x + displacement, uv.y)).x;

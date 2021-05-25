@@ -1,6 +1,7 @@
 user int impscape_language = 0; //Lenguaje
 
-user bool impscape_normalClear = false; //Si paso el juego
+user int impscape_clear = 0; //Si paso el juego (cualquier dificultad)
+user int impscape_ultraClear = 0; //Si paso el modo ultra
 
 //Shaders
 user noarchive int Shader = 0;

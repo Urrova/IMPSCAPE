@@ -1,5 +1,3 @@
-/////SHADER NEGATIVO/////
-
 void main(){
 	vec4 pcolor = texture(InputTexture, TexCoord);
 	

@@ -16,6 +16,8 @@ BlackGreenTechTexturesPack.wad
 
 Post your doom textures DW thread{
 	Gez
+	DooMAD
+	Cacodemon187
 }
 
 === Realm667 resource wads used | Recursos de realm667 usados ===

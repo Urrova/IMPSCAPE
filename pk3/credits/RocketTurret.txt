@@ -1,0 +1,20 @@
+Name: Rocket Turret
+Difficulty: Medium
+Connections: Spawns Strife RocketTrails, sprites are included.
+Summon: RocketTurret
+Melee: No
+Distance: Projectile
+Type: Cybernetic
+Brightmaps: No
+Actor modification: No
+ACS: No
+
+Code: Gothic
+GLDefs: Gothic
+Sounds: People Can Fly (Painkiller), Rogue Entertainment (Q1: Dissolution of Eternity, Q2: Ground Zero)
+Sprites: Accolade (Erradicator), Rogue Entertainment (Strife), id Software (Doom), Amuscaria
+Sprite Edit: Gothic
+
+A rocket-firing turret... I feel like that's enough of an explanation. Like the acolytes in Strife,
+it will only react to gunfire, so be careful.
+(modified)

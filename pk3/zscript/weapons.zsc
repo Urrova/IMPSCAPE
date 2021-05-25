@@ -4,7 +4,6 @@ class ExplosiveBarrelWeapon : DoomWeapon{
 		Weapon.SelectionOrder 2800;
 		Weapon.AmmoUse 0;
 		Weapon.AmmoGive 0;
-		Weapon.AmmoType "Cell";
 		Weapon.YAdjust 48;
 		+WEAPON.NOAUTOFIRE;
 	}
@@ -35,6 +34,46 @@ class ExplosiveBarrelWeapon : DoomWeapon{
 			TNT1 A 0;
 		Spawn:
 			BEXW A -1;
+			Stop;
+	}
+}
+
+class OilDrumWeapon : DoomWeapon{
+	default{
+		Height 20;
+		Weapon.SelectionOrder 2800;
+		Weapon.AmmoUse 0;
+		Weapon.AmmoGive 0;
+		Weapon.YAdjust 48;
+		+WEAPON.NOAUTOFIRE;
+	}
+	states{
+		Ready:
+			OILW A 1 A_WeaponReady;
+			Loop;
+		Deselect:
+			OILW A 1 A_Lower;
+			Loop;
+		Select:
+			OILW A 1 A_Raise;
+			Loop;
+		Fire:
+			OILW A 1 {
+			Actor pPlayer = GetPointer(AAPTR_PLAYER1);
+			
+			A_FireProjectile("OilDrumProjectile");
+			
+			if (pPlayer is "ImpPlayer" || pPlayer is "FlyingImpPlayer")
+				A_GiveInventory("ImpArm",1,AAPTR_PLAYER1);
+				
+			if (pPlayer is "DarkImpPlayer")
+				A_GiveInventory("DarkImpArm",1,AAPTR_PLAYER1);
+				
+			A_TakeInventory("OilDrumWeapon",1,0,AAPTR_PLAYER1);
+			}
+			TNT1 A 0;
+		Spawn:
+			OILW A -1;
 			Stop;
 	}
 }
