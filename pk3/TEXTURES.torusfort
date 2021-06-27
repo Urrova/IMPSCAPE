@@ -238,46 +238,6 @@ Texture "BRGRGY02", 128, 128
 	Patch "BRGRGY02", 0, 0
 }
 
-Texture "BSTONEQ1", 64, 128
-{
-	Patch "BSTONEQ1", 0, 0
-}
-
-Texture "BSTONEQ2", 64, 128
-{
-	Patch "BSTONEQ2", 0, 0
-}
-
-Texture "BSTONEQ3", 64, 128
-{
-	Patch "BSTONEQ3", 0, 0
-}
-
-Texture "BSTONEQ4", 64, 128
-{
-	Patch "BSTONEQ4", 0, 0
-}
-
-Texture "BSTONER1", 64, 128
-{
-	Patch "BSTONER1", 0, 0
-}
-
-Texture "BSTONK1", 64, 128
-{
-	Patch "BSTONK1", 0, 0
-}
-
-Texture "BSTONK2", 64, 128
-{
-	Patch "BSTONK2", 0, 0
-}
-
-Texture "BSTONK3", 64, 128
-{
-	Patch "BSTONK3", 0, 0
-}
-
 Texture "W106_1", 256, 128
 {
 	Patch "W106_1", 0, 0

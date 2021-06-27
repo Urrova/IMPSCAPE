@@ -11,7 +11,6 @@ map INTRO "XD"{
 }
 
 map TESTROOM "Fuck You So"{
-	music = "D_IN_CIT"
 	next = "MAP01"
 	LevelNum = 99
 }
@@ -56,4 +55,9 @@ map MAP06 "The Supercomputer"{
 map MAP07 "The teleporters system"{
 	music = "D_GUSANO"
 	LevelNum = 7
+}
+
+map MAP08 "HUB"{
+	music = "D_HUB"
+	LevelNum = 8
 }

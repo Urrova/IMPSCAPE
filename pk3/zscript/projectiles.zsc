@@ -193,6 +193,7 @@ class ExplosiveBarrelProjectile : Actor{
 		Height 42;
 		Projectile;
 		-NOGRAVITY;
+		+NODAMAGETHRUST;
 		Speed 30;
 		Damage 20;
 		DeathSound "world/barrelx";
@@ -204,7 +205,10 @@ class ExplosiveBarrelProjectile : Actor{
 		Death:
 			BEXP B 5 Bright A_Scream;
 			BEXP C 5 Bright;
-			BEXP D 5 Bright A_Explode;
+			BEXP D 5 Bright {
+			A_Explode();
+			A_RadiusThrust();
+			}
 			BEXP E 10 Bright;
 			TNT1 A 1050 Bright A_BarrelDestroy;
 			Stop;
@@ -219,6 +223,7 @@ class OilDrumProjectile : Actor{
 		Height 42;
 		Projectile;
 		-NOGRAVITY;
+		+NODAMAGETHRUST;
 		Speed 30;
 		Damage 20;
 		DeathSound "world/barrelx";
@@ -229,7 +234,10 @@ class OilDrumProjectile : Actor{
 			Loop;
 		Death:
 			OILD B 5 BRIGHT;
-			OILD C 5 BRIGHT A_Explode;
+			OILD C 5 BRIGHT {
+			A_Explode();
+			A_RadiusThrust();
+			}
 			OILC CCCCC 0 BRIGHT A_SpawnItemEx("BarrelFlames", random (0, 40), random (0, 40), 0, 0, 0, 0, random (0, 360)) ;
 			OILD D 10 BRIGHT;
 			OILD D 1050 BRIGHT A_BarrelDestroy;

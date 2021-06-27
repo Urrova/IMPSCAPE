@@ -3,6 +3,7 @@ Mod Maker: URROVA
 Imp Player: taken from Doom Empathy
 Some of the sounds from the ZDoom Demo Wad and snd.wad (sound demo)
 Status bar Imp Face: Impatience_52.wads
+CNT2** sprites: Ancient Aliens
 
 === Texture packs used | Packs de texturas usadas ===
 Nightmare texture pack + Revamped COMPUTE1 texture: Nightmare
@@ -48,5 +49,5 @@ DSPLASMA from Doom 64 / PSX Doom
 
 
 
-im so unorganized, for the next mod i have to separate texture groups and not copy/paste textures on
+im so unorganized, for the next mod i have to separate texture groups/folders and not copy/paste textures on
 the textures folder.

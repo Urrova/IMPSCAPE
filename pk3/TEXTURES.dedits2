@@ -23,43 +23,6 @@ Texture "_WALL02", 128, 128
 	Patch "D2_WALL2", 0, 0
 }
 
-Texture "_WALL03", 64, 128
-{
-	Patch "D2_WALL3", 0, 0
-	Patch "D2_WALL3", 32, 0
-}
-
-Texture "_WALL04", 64, 128
-{
-	Patch "D2_WALL4", 0, 0
-}
-
-Texture "_WALL05", 64, 128
-{
-	Patch "D2_WALL5", 0, 0
-}
-
-Texture "_WALL06", 64, 128
-{
-	Patch "D2_WALL6", 0, 0
-	Patch "D2_WALL6", 0, 64
-}
-
-Texture "_WALL07", 64, 128
-{
-	Patch "D2_WALL7", 0, 0
-}
-
-Texture "_WALL08", 64, 128
-{
-	Patch "D2_WALL8", 0, 0
-}
-
-Texture "_WALL09", 64, 128
-{
-	Patch "D2_WALL9", 0, 0
-}
-
 Texture "_WALL10", 64, 128
 {
 	Patch "D2_WALL0", 0, 0

@@ -26,3 +26,17 @@ class Cientist1_Patrol : Cientist1{
 			loop;
 	}
 }
+
+class Cientist2 : Actor{
+	default{
+		speed 0;
+		+SOLID;
+		radius 32;
+		height 64;
+	}
+	states{
+		Spawn:
+			CNT2 A -1;
+			stop;
+	}
+}

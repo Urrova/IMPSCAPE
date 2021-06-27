@@ -57,4 +57,8 @@ script "DeathController" DEATH{
 		SetActorRoll(1234,i);
 		delay(1);
 	}
+	FadeTo(0,0,0,1.0,3.0);
+	delay(70);
+	SetFont("BIGFONT");
+	HudMessage(s:"GAME OVER";HUDMSG_TYPEON,5132,CR_TAN,0.5,0.5,9999.0,0.1,9999.0,1.0);
 }
