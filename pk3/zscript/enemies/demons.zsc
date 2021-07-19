@@ -1,0 +1,153 @@
+class ControlledImp : DoomImp{
+	//$Title "Controlled Imp"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+	states{
+		Melee:
+		Missile:
+			TROO EF 8 A_FaceTarget;
+			TROO G 0 A_TroopAttack;
+			TROO G 6 A_SpawnProjectile("DoomImpBall",32.0,0,random(-15,15));
+			Goto See;
+	}
+}
+
+class ControlledPinky : Demon{
+	//$Title "Controlled Pinky Demon"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+}
+
+class ControlledHellKnight : HellKnight{
+	//$Title "Controlled Hell Knight"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+}
+
+class ControlledBaronOfHell : BaronOfHell{
+	//$Title "Controlled Baron of Hell"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+}
+
+class ControlledLostSoul : LostSoul{
+	//$Title "Controlled Lost Soul"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+}
+
+class ControlledArachnotron : Arachnotron{
+	//$Title "Controlled Arachnotron"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+}
+
+class ControlledArchvile : Archvile{
+	//$Title "Controlled Archvile"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+}
+
+class ControlledCacodemon : Cacodemon{
+	//$Title "Controlled Cacodemon"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+}
+
+class ControlledCyberdemon : Cyberdemon{
+	//$Title "Controlled Cyberdemon"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+}
+
+class ControlledFatso : Fatso{
+	//$Title "Controlled Fatso"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+}
+
+class ControlledPainElemental : PainElemental{
+	//$Title "Controlled PainElemental"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+	states{
+		Missile:
+			PAIN D 5 A_FaceTarget;
+			PAIN E 5 A_FaceTarget;
+			PAIN F 5 BRIGHT A_FaceTarget;
+			PAIN F 0 BRIGHT A_PainAttack("ControlledLostSoul");
+			Goto See;
+		Death:
+			PAIN H 8 BRIGHT;
+			PAIN I 8 BRIGHT A_Scream;
+			PAIN JK 8 BRIGHT;
+			PAIN L 8 BRIGHT A_PainDie("ControlledLostSoul");
+			PAIN M 8 BRIGHT;
+			Stop;
+	}
+}
+
+class ControlledRevenant : Revenant{
+	//$Title "Controlled Revenant"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+}
+
+class ControlledSpiderMastermind : SpiderMastermind{
+	//$Title "Controlled Spider Mastermind"
+	//$Category "Enemies/Controlled Monsters"
+	//$Angled
+	default{
+		Translation "Ice";
+		bloodcolor "00 FF 00";
+	}
+
+}

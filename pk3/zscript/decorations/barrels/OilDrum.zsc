@@ -1,0 +1,169 @@
+Class OilDrum : SwitchableDecoration{
+	default{
+		Health 20;
+		Radius 10;
+		Height 34;
+		+SOLID;
+		+SHOOTABLE;
+		+NOBLOOD;
+		+ACTIVATEMCROSS;
+		+DONTGIB;
+		+NOICEDEATH;
+		+OLDRADIUSDMG;
+		DeathSound "world/barrelx";
+		Obituary "$OB_BARREL";
+		Activation THINGSPEC_Switch;
+		+USESPECIAL;
+		}
+	States{
+		Spawn:
+			OILD A 6;
+			Loop;
+		Active:
+			TNT1 A 1{
+				if (CheckInventory("ExplosiveBarrelWeapon",1,AAPTR_PLAYER1) || CheckInventory("OilDrumWeapon",1,AAPTR_PLAYER1)){
+					return;
+				}
+				//Le saca al jugador cualquier tipo de brazo de imp que tenga.
+				if (CheckInventory("ImpArm",1,AAPTR_PLAYER1))
+					A_TakeInventory("ImpArm",1,0,AAPTR_PLAYER1);
+					
+				if (CheckInventory("DarkImpArm",1,AAPTR_PLAYER1))
+					A_TakeInventory("DarkImpArm",1,0,AAPTR_PLAYER1);
+					
+				A_GiveInventory("OilDrumWeapon",0,AAPTR_PLAYER1);
+				A_BarrelDestroy();
+			}
+			goto Spawn;
+		Inactive:
+			TNT1 A 1{
+				if (CheckInventory("ExplosiveBarrelWeapon",1,AAPTR_PLAYER1) || CheckInventory("OilDrumWeapon",1,AAPTR_PLAYER1)){
+					return;
+				}
+				if (CheckInventory("ImpArm",1,AAPTR_PLAYER1))
+					A_TakeInventory("ImpArm",1,0,AAPTR_PLAYER1);
+					
+				if (CheckInventory("DarkImpArm",1,AAPTR_PLAYER1))
+					A_TakeInventory("DarkImpArm",1,0,AAPTR_PLAYER1);
+					
+				A_GiveInventory("OilDrumWeapon",0,AAPTR_PLAYER1);
+				A_BarrelDestroy();
+			}
+			goto Spawn;
+		Death:
+			OILD A 5 BRIGHT;
+			OILD A 5 BRIGHT A_Scream;
+			OILD B 5 BRIGHT;
+			OILD C 5 BRIGHT A_Explode;
+			OILC CCCCC 0 BRIGHT A_SpawnItemEx ("BarrelFlames", random (0, 40), random (0, 40), 0, 0, 0, 0, random (0, 360)) ;
+			OILD D 10 BRIGHT;
+			OILD D 1050 BRIGHT A_BarrelDestroy;
+			OILD D 5 A_Respawn;
+			Wait;
+	}
+}
+
+Class BarrelFlames : Actor{
+	default{
+		Radius 16;
+		Height 24;
+		ReactionTime 75;
+		damagetype "fire";
+		renderstyle "Add";
+		Projectile;
+		+NODAMAGETHRUST;
+		+BLOODLESSIMPACT;
+		-NOGRAVITY;
+		-DROPOFF;
+		-MISSILE;
+		-ACTIVATEIMPACT;
+		-ACTIVATEPCROSS;
+	}
+	States{
+		Spawn:
+			OILS A 0 bright;
+			OILS A 4 bright A_StartSound("BarrelFire/Loop", 5, CHANF_LOOP);
+			OILS A 0 bright A_StartSound("BarrelFire/Start", 6);
+			OILS BC 4 bright;
+		FireLoop:
+			OILF AB 4 bright;
+			OILF C 4 bright A_Explode(5, 40);
+			OILF C 0 bright A_CountDown;
+			Loop;
+		Death:
+			OILS CB 4 bright;
+			OILS A 4 bright A_StopSound(5);
+			Stop;
+	}
+}
+//Arma
+class OilDrumWeapon : DoomWeapon{
+	default{
+		Height 20;
+		Weapon.SelectionOrder 2800;
+		Weapon.AmmoUse 0;
+		Weapon.AmmoGive 0;
+		Weapon.YAdjust 48;
+		+WEAPON.NOAUTOFIRE;
+	}
+	states{
+		Ready:
+			OILW A 1 A_WeaponReady;
+			Loop;
+		Deselect:
+			OILW A 1 A_Lower;
+			Loop;
+		Select:
+			OILW A 1 A_Raise;
+			Loop;
+		Fire:
+			OILW A 1 {
+			Actor pPlayer = GetPointer(AAPTR_PLAYER1);
+			
+			A_FireProjectile("OilDrumProjectile");
+			
+			if (pPlayer is "ImpPlayer" || pPlayer is "FlyingImpPlayer")
+				A_GiveInventory("ImpArm",1,AAPTR_PLAYER1);
+				
+			if (pPlayer is "DarkImpPlayer")
+				A_GiveInventory("DarkImpArm",1,AAPTR_PLAYER1);
+				
+			A_TakeInventory("OilDrumWeapon",1,0,AAPTR_PLAYER1);
+			}
+			TNT1 A 0;
+		Spawn:
+			OILW A -1;
+			Stop;
+	}
+}
+
+//Proyectil
+class OilDrumProjectile : Actor{
+	default{
+		Health 20;
+		Radius 10;
+		Height 42;
+		Projectile;
+		-NOGRAVITY;
+		+NODAMAGETHRUST;
+		Speed 30;
+		Damage 20;
+		DeathSound "world/barrelx";
+	}
+	states{
+		Spawn:
+			OILD A 6 Bright;
+			Loop;
+		Death:
+			OILD B 5 BRIGHT;
+			OILD C 5 BRIGHT {
+			A_Explode();
+			A_RadiusThrust();
+			}
+			OILC CCCCC 0 BRIGHT A_SpawnItemEx("BarrelFlames", random (0, 40), random (0, 40), 0, 0, 0, 0, random (0, 360)) ;
+			OILD D 10 BRIGHT;
+			OILD D 1050 BRIGHT A_BarrelDestroy;
+			OILD D 5 A_Respawn;
+			Wait;
+	}
+}

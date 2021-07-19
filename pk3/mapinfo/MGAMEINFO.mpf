@@ -5,6 +5,6 @@ GameInfo{
    BlurAmount = 0.0
    AddEventHandlers = "ShaderHandler"
    TitleTime = 2147483647 //INFINITE
-   TitleMusic = "/music/D_INTRO.ogg"
-   IntermissionMusic = "/music/D_TELEPT.ogg"
+   TitleMusic = "D_INTRO"
+   IntermissionMusic = "D_TELEPT"
 }

@@ -1,3 +1,11 @@
+DEFAULTLISTMENU{
+	Font "BigFont", "Untranslated"
+	LineSpacing 20
+	Selector "M_SKULL1", -32, -5
+	Font "BigUpper", "Red"
+	LineSpacing 18
+}
+
 //Menu Principal
 ListMenu "MainMenu"{
 	StaticPatch 94, 2, "M_DOOM"

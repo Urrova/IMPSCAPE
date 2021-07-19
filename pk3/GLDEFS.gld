@@ -1,4 +1,3 @@
 #include gldefs/dlights.gld //Dynamic lights and glows
 #include gldefs/shaders.gld //Shaders
 #include gldefs/bmaps.gld //Brightmaps
-#include gldefs/skyboxes.gld //Skyboxes

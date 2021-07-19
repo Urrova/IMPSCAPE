@@ -1,0 +1,181 @@
+Class GTechPillar : Actor{
+	default{
+		Health 1;
+		Mass 99999;
+		Radius 12;
+		Height 128;
+		DeathHeight 128;
+		+SOLID;
+		+SHOOTABLE;
+		+NOBLOOD;
+		+DONTGIB;
+		+NOICEDEATH;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC A -1;
+			Loop;
+		Death:
+			GTEC B 1;
+			TNT1 A 0 A_PlaySound("PillarGlassBreak");
+			TNT1 AAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,48,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+			TNT1 AAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,68,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+			GTEC B -1;
+			Stop;
+	}
+}
+
+Class GTechPillarShort : Actor{
+	default{
+		Health 1;
+		Mass 99999;
+		Radius 12;
+		Height 82;
+		DeathHeight 82;
+		+SOLID;
+		+SHOOTABLE;
+		+NOBLOOD;
+		+DONTGIB;
+		+NOICEDEATH;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC G -1;
+			Loop;
+		Death:
+			GTEC H 1;
+			TNT1 A 0 A_PlaySound("PillarGlassBreak");
+			TNT1 AAAAAAAAAAAAAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,35,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+			GTEC H -1;
+			Stop;
+	}
+}
+
+//BLINKING LIGHTS AND BREAKABLE
+
+Class GTechPillarLight : Actor{
+	default{
+		Health 1;
+		Mass 99999;
+		Radius 12;
+		Height 128;
+		DeathHeight 128;
+		+SOLID;
+		+SHOOTABLE;
+		+NOBLOOD;
+		+DONTGIB;
+		+NOICEDEATH;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC CC 18;
+			GTEC D 6;
+			Loop;
+		Death:
+			TNT1 A 0 A_PlaySound("PillarGlassBreak");
+			TNT1 AAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,48,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+			TNT1 AAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,68,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+		Broken:	 
+			GTEC EE 18;
+			GTEC F 6;
+			Loop;
+	}
+}
+
+Class GTechPillarLightShort : Actor{
+	default{
+		Health 1;
+		Mass 99999;
+		Radius 12;
+		Height 82;
+		DeathHeight 82;
+		+SOLID;
+		+SHOOTABLE;
+		+NOBLOOD;
+		+DONTGIB;
+		+NOICEDEATH;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC II 18;
+			GTEC J 6;
+			Loop;
+		Death:
+			TNT1 A 0 A_PlaySound("PillarGlassBreak");
+			TNT1 AAAAAAAAAAAAAAA 0 A_SpawnItemEx("PillarGlassShard",0,0,35,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
+		Broken:	 
+			GTEC KK 18;
+			GTEC L 6;
+			Loop;
+	}
+}
+
+//ALREADY BROKEN PILLAR ACTORS FOR MAP DECORATION VARIETY
+
+Class GTechPillarB : Actor{
+	default{
+		Mass 99999;
+		Radius 12;
+		Height 128;
+		+SOLID;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC B -1;
+			Loop;
+	}
+}
+
+Class GTechPillarSB : Actor{
+	default{
+		Mass 99999;
+		Radius 12;
+		Height 82;
+		+SOLID;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC H -1;
+			Loop;
+	}
+}
+
+//ALREADY BROKEN WITH LIGHTS
+
+Class GTechPillarLightB : Actor{
+	default{
+		Mass 99999;
+		Radius 12;
+		Height 128;
+		+SOLID;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:	 
+			GTEC EE 18;
+			GTEC F 6;
+			Loop;
+	}
+}
+
+Class GTechPillarLightSB : Actor{
+	default{
+		Mass 99999;
+		Radius 12;
+		Height 82;
+		+SOLID;
+		+NODAMAGETHRUST;
+	}
+	States{
+		Spawn:
+			GTEC KK 18;
+			GTEC L 6;
+			Loop;
+	}
+}

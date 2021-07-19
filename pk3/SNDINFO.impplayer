@@ -6,8 +6,8 @@ $playersound	ImpPlayer	male	*pain100	dspopain
 $playersounddup	ImpPlayer	male	*pain75		*pain100
 $playersounddup	ImpPlayer	male	*pain50		*pain100
 $playersounddup	ImpPlayer	male	*pain25		*pain100
-$playersound	ImpPlayer	male	*grunt		dsbgsit1
-$playersound	ImpPlayer	male	*land		dsbgsit2
+$playersound	ImpPlayer	male	*grunt		dsempty
+$playersound	ImpPlayer	male	*land		dsempty
 $playersound	ImpPlayer	male	*jump		dsjump
 $playersound	ImpPlayer	male	*fist		dsclaw
 $playersound	ImpPlayer	male	*usefail	dsbgact
@@ -19,8 +19,8 @@ $playersound	ImpPlayer	female	*pain100	dspopain
 $playersounddup	ImpPlayer	female	*pain75		*pain100
 $playersounddup	ImpPlayer	female	*pain50		*pain100
 $playersounddup	ImpPlayer	female	*pain25		*pain100
-$playersound	ImpPlayer	female	*grunt		dsbgsit1
-$playersound	ImpPlayer	female	*land		dsbgsit2
+$playersound	ImpPlayer	female	*grunt		dsempty
+$playersound	ImpPlayer	female	*land		dsempty
 $playersound	ImpPlayer	female	*jump		dsjump
 $playersound	ImpPlayer	female	*fist		dsclaw
 $playersound	ImpPlayer	female	*usefail	dsbgact
@@ -32,8 +32,8 @@ $playersound	ImpPlayer	other	*pain100	dspopain
 $playersounddup	ImpPlayer	other	*pain75		*pain100
 $playersounddup	ImpPlayer	other	*pain50		*pain100
 $playersounddup	ImpPlayer	other	*pain25		*pain100
-$playersound	ImpPlayer	other	*grunt		dsbgsit1
-$playersound	ImpPlayer	other	*land		dsbgsit2
+$playersound	ImpPlayer	other	*grunt		dsempty
+$playersound	ImpPlayer	other	*land		dsempty
 $playersound	ImpPlayer	other	*jump		dscjump
 $playersound	ImpPlayer	other	*fist		dsclaw
 $playersound	ImpPlayer	other	*usefail	dsbgact
